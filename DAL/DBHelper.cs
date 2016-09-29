@@ -10,12 +10,12 @@ namespace DAL
 {
     public class DBHelper
     {
-        public static DataTable getDtFromSQL(string SQL)
+        public static DataTable getDtFromSQL(string strSQL)
         {
-            string strSQL = ConfigurationManager.ConnectionStrings["MyConn"].ConnectionString;
-            SqlConnection conn = new SqlConnection(strSQL);
+            string strConn = ConfigurationManager.ConnectionStrings["MyConn"].ConnectionString;
+            SqlConnection conn = new SqlConnection(strConn);
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(SQL, conn);
+            SqlDataAdapter da = new SqlDataAdapter(strSQL,conn);
             da.Fill(dt);
             return dt;
         }

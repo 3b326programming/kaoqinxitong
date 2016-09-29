@@ -17,6 +17,9 @@ public partial class _Default : System.Web.UI.Page
         {
             Label3.Text = "登录成功";
             Label4.Text = Class1.getUserrode(TextBox1.Text);
+            Session["userid"] = TextBox1.Text.Trim();
+            Session["rode"] = Label4.Text;
+            Response.Redirect("adminDefault.aspx");
         }
         else
         {
