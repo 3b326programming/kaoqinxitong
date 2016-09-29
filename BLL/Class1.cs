@@ -31,5 +31,10 @@ namespace BLL
             DataTable dt = DBHelper.getDtFromSQL("select userrode from Login where uid='" + userName+"'");
             return dt.Rows[0][0].ToString();
         }
+        public static DataTable getClass()
+        {
+            DataTable dt = DBHelper.getDtFromSQL("select Class1 from student");
+            return dt;
+        }
     }
 }
