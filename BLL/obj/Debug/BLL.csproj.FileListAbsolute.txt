@@ -1,0 +1,7 @@
+G:\ASP\考勤系统\System\BLL\bin\Debug\BLL.dll
+G:\ASP\考勤系统\System\BLL\bin\Debug\BLL.pdb
+G:\ASP\考勤系统\System\BLL\bin\Debug\DBA.dll
+G:\ASP\考勤系统\System\BLL\bin\Debug\DBA.pdb
+G:\ASP\考勤系统\System\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+G:\ASP\考勤系统\System\BLL\obj\Debug\BLL.dll
+G:\ASP\考勤系统\System\BLL\obj\Debug\BLL.pdb

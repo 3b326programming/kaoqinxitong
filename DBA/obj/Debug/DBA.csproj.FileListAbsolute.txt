@@ -1,0 +1,4 @@
+G:\ASP\考勤系统\System\DBA\bin\Debug\DBA.dll
+G:\ASP\考勤系统\System\DBA\bin\Debug\DBA.pdb
+G:\ASP\考勤系统\System\DBA\obj\Debug\DBA.dll
+G:\ASP\考勤系统\System\DBA\obj\Debug\DBA.pdb
