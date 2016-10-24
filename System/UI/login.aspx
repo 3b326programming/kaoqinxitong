@@ -35,14 +35,13 @@
             
          
           }
-	
 </style>
 </head>
-<%--<body>
+<body>
     <form id="form1" runat="server">
    
 
-<table width="100%"  height="100%" border="0" cellspacing="0" cellpadding="0"">
+<table width="100%"  height="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:92px">
   <tr>
     <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
       <tr>
@@ -57,7 +56,7 @@
                 <td width="518" style="background:url(images/login03.jpg)"><table width="320" border="0" align="center" cellpadding="0" cellspacing="0">
                   <tr>
                     <td width="40" height="40"><img src="images/user.gif" width="30" height="30"></td>
-                    <td width="45" height="40">用户</td>
+                    <td width="40" height="40">用户</td>
                     <td width="235" height="40"><asp:TextBox ID="TextBox1" runat="server" CssClass="s"></asp:TextBox>
                         </td>
                   </tr>
@@ -71,7 +70,7 @@
                     <tr>
                     <td height="40">&nbsp;</td>
                     <td height="40">验证码</td>
-                    <td height="40" ><asp:TextBox ID="TextBox3" runat="server"  CssClass="s" ></asp:TextBox> <img src="Core.aspx" alt="验证字符" style="width:65;height:35; vertical-align:top;">
+                    <td height="40" ><asp:TextBox ID="TextBox3" runat="server"  CssClass="s" ></asp:TextBox> <img src="Core.aspx" alt="验证字符" style="width:65;height:21; vertical-align:top;">
                        </td>
                     </tr>
                   <tr>
