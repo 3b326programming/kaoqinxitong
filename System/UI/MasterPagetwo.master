@@ -18,7 +18,7 @@
         #top
         {
             width:100%;
-            height:100px;
+            height:167px;
             background-repeat:repeat;
             background-image:url(images/bg.gif);
             font-style:italic;
@@ -84,7 +84,26 @@
               
                 <asp:TreeView ID="TreeView1" runat="server" 
                     Height="466px" Width="157px" 
-                    onselectednodechanged="TreeView1_SelectedNodeChanged">
+                    onselectednodechanged="TreeView1_SelectedNodeChanged"  HoverNodeStyle-ForeColor="red" HoverNodeStyle-Font-Bold="true"  HoverNodeStyle-BorderStyle="Ridge"
+                    ImageSet="BulletedList3" 
+                    ShowExpandCollapse="False" >
+                     <LevelStyles>
+        
+          <asp:TreeNodeStyle ChildNodesPadding="10" 
+            Font-Bold="true" 
+            Font-Size="12pt" 
+            ForeColor="black"   />
+         
+          <asp:TreeNodeStyle ChildNodesPadding="5" 
+             
+            Font-Size="10pt"  Font-Bold="true"  ForeColor="black"  
+            />
+          <asp:TreeNodeStyle ChildNodesPadding="10" 
+            Font-Size="8pt" Font-Italic="true" ForeColor="black" Font-Bold="true"  
+            />
+             
+        </LevelStyles>
+                   
                    
                 </asp:TreeView>
                 

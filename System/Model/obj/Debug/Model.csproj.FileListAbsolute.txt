@@ -2,3 +2,7 @@ G:\ASP\考勤系统\System\Model\bin\Debug\Model.dll
 G:\ASP\考勤系统\System\Model\bin\Debug\Model.pdb
 G:\ASP\考勤系统\System\Model\obj\Debug\Model.dll
 G:\ASP\考勤系统\System\Model\obj\Debug\Model.pdb
+C:\Users\hp\Desktop\kaoqinxitong1\System\Model\bin\Debug\Model.dll
+C:\Users\hp\Desktop\kaoqinxitong1\System\Model\bin\Debug\Model.pdb
+C:\Users\hp\Desktop\kaoqinxitong1\System\Model\obj\Debug\Model.dll
+C:\Users\hp\Desktop\kaoqinxitong1\System\Model\obj\Debug\Model.pdb

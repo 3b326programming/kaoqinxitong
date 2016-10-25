@@ -2,3 +2,7 @@ G:\ASP\考勤系统\System\DBA\bin\Debug\DBA.dll
 G:\ASP\考勤系统\System\DBA\bin\Debug\DBA.pdb
 G:\ASP\考勤系统\System\DBA\obj\Debug\DBA.dll
 G:\ASP\考勤系统\System\DBA\obj\Debug\DBA.pdb
+C:\Users\hp\Desktop\kaoqinxitong1\System\DBA\bin\Debug\DBA.dll
+C:\Users\hp\Desktop\kaoqinxitong1\System\DBA\bin\Debug\DBA.pdb
+C:\Users\hp\Desktop\kaoqinxitong1\System\DBA\obj\Debug\DBA.dll
+C:\Users\hp\Desktop\kaoqinxitong1\System\DBA\obj\Debug\DBA.pdb
