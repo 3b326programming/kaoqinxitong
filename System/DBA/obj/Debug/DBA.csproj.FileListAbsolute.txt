@@ -6,3 +6,7 @@ C:\Users\hp\Desktop\kaoqinxitong1\System\DBA\bin\Debug\DBA.dll
 C:\Users\hp\Desktop\kaoqinxitong1\System\DBA\bin\Debug\DBA.pdb
 C:\Users\hp\Desktop\kaoqinxitong1\System\DBA\obj\Debug\DBA.dll
 C:\Users\hp\Desktop\kaoqinxitong1\System\DBA\obj\Debug\DBA.pdb
+C:\Users\Administrator.PC-20160907AROS\Desktop\ASP.Net\新建文件夹\kaoqinxitong\System\DBA\bin\Debug\DBA.dll
+C:\Users\Administrator.PC-20160907AROS\Desktop\ASP.Net\新建文件夹\kaoqinxitong\System\DBA\bin\Debug\DBA.pdb
+C:\Users\Administrator.PC-20160907AROS\Desktop\ASP.Net\新建文件夹\kaoqinxitong\System\DBA\obj\Debug\DBA.dll
+C:\Users\Administrator.PC-20160907AROS\Desktop\ASP.Net\新建文件夹\kaoqinxitong\System\DBA\obj\Debug\DBA.pdb

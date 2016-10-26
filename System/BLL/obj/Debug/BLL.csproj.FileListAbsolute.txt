@@ -12,3 +12,10 @@ C:\Users\hp\Desktop\kaoqinxitong1\System\BLL\bin\Debug\DBA.pdb
 C:\Users\hp\Desktop\kaoqinxitong1\System\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 C:\Users\hp\Desktop\kaoqinxitong1\System\BLL\obj\Debug\BLL.dll
 C:\Users\hp\Desktop\kaoqinxitong1\System\BLL\obj\Debug\BLL.pdb
+C:\Users\Administrator.PC-20160907AROS\Desktop\ASP.Net\新建文件夹\kaoqinxitong\System\BLL\bin\Debug\BLL.dll
+C:\Users\Administrator.PC-20160907AROS\Desktop\ASP.Net\新建文件夹\kaoqinxitong\System\BLL\bin\Debug\BLL.pdb
+C:\Users\Administrator.PC-20160907AROS\Desktop\ASP.Net\新建文件夹\kaoqinxitong\System\BLL\bin\Debug\DBA.dll
+C:\Users\Administrator.PC-20160907AROS\Desktop\ASP.Net\新建文件夹\kaoqinxitong\System\BLL\bin\Debug\DBA.pdb
+C:\Users\Administrator.PC-20160907AROS\Desktop\ASP.Net\新建文件夹\kaoqinxitong\System\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Administrator.PC-20160907AROS\Desktop\ASP.Net\新建文件夹\kaoqinxitong\System\BLL\obj\Debug\BLL.dll
+C:\Users\Administrator.PC-20160907AROS\Desktop\ASP.Net\新建文件夹\kaoqinxitong\System\BLL\obj\Debug\BLL.pdb

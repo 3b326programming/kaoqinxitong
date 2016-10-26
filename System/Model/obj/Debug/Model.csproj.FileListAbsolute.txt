@@ -6,3 +6,7 @@ C:\Users\hp\Desktop\kaoqinxitong1\System\Model\bin\Debug\Model.dll
 C:\Users\hp\Desktop\kaoqinxitong1\System\Model\bin\Debug\Model.pdb
 C:\Users\hp\Desktop\kaoqinxitong1\System\Model\obj\Debug\Model.dll
 C:\Users\hp\Desktop\kaoqinxitong1\System\Model\obj\Debug\Model.pdb
+C:\Users\Administrator.PC-20160907AROS\Desktop\ASP.Net\新建文件夹\kaoqinxitong\System\Model\bin\Debug\Model.dll
+C:\Users\Administrator.PC-20160907AROS\Desktop\ASP.Net\新建文件夹\kaoqinxitong\System\Model\bin\Debug\Model.pdb
+C:\Users\Administrator.PC-20160907AROS\Desktop\ASP.Net\新建文件夹\kaoqinxitong\System\Model\obj\Debug\Model.dll
+C:\Users\Administrator.PC-20160907AROS\Desktop\ASP.Net\新建文件夹\kaoqinxitong\System\Model\obj\Debug\Model.pdb
