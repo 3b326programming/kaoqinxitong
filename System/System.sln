@@ -25,7 +25,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "UI", "UI\", "{9697BB70-6555
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "5793"
+		VWDPort = "37828"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
