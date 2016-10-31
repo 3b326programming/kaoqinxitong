@@ -19,3 +19,17 @@ C:\Users\Administrator.PC-20160907AROS\Desktop\ASP.Net\新建文件夹\kaoqinxit
 C:\Users\Administrator.PC-20160907AROS\Desktop\ASP.Net\新建文件夹\kaoqinxitong\System\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 C:\Users\Administrator.PC-20160907AROS\Desktop\ASP.Net\新建文件夹\kaoqinxitong\System\BLL\obj\Debug\BLL.dll
 C:\Users\Administrator.PC-20160907AROS\Desktop\ASP.Net\新建文件夹\kaoqinxitong\System\BLL\obj\Debug\BLL.pdb
+F:\colone\kaoqinxitong\System\BLL\bin\Debug\BLL.dll
+F:\colone\kaoqinxitong\System\BLL\bin\Debug\BLL.pdb
+F:\colone\kaoqinxitong\System\BLL\bin\Debug\DBA.dll
+F:\colone\kaoqinxitong\System\BLL\bin\Debug\DBA.pdb
+F:\colone\kaoqinxitong\System\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+F:\colone\kaoqinxitong\System\BLL\obj\Debug\BLL.dll
+F:\colone\kaoqinxitong\System\BLL\obj\Debug\BLL.pdb
+F:\c#\colone\kaoqinxitong\System\BLL\bin\Debug\BLL.dll
+F:\c#\colone\kaoqinxitong\System\BLL\bin\Debug\BLL.pdb
+F:\c#\colone\kaoqinxitong\System\BLL\bin\Debug\DBA.dll
+F:\c#\colone\kaoqinxitong\System\BLL\bin\Debug\DBA.pdb
+F:\c#\colone\kaoqinxitong\System\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+F:\c#\colone\kaoqinxitong\System\BLL\obj\Debug\BLL.dll
+F:\c#\colone\kaoqinxitong\System\BLL\obj\Debug\BLL.pdb

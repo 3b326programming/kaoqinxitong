@@ -10,3 +10,11 @@ C:\Users\Administrator.PC-20160907AROS\Desktop\ASP.Net\新建文件夹\kaoqinxit
 C:\Users\Administrator.PC-20160907AROS\Desktop\ASP.Net\新建文件夹\kaoqinxitong\System\Model\bin\Debug\Model.pdb
 C:\Users\Administrator.PC-20160907AROS\Desktop\ASP.Net\新建文件夹\kaoqinxitong\System\Model\obj\Debug\Model.dll
 C:\Users\Administrator.PC-20160907AROS\Desktop\ASP.Net\新建文件夹\kaoqinxitong\System\Model\obj\Debug\Model.pdb
+F:\colone\kaoqinxitong\System\Model\bin\Debug\Model.dll
+F:\colone\kaoqinxitong\System\Model\bin\Debug\Model.pdb
+F:\colone\kaoqinxitong\System\Model\obj\Debug\Model.dll
+F:\colone\kaoqinxitong\System\Model\obj\Debug\Model.pdb
+F:\c#\colone\kaoqinxitong\System\Model\bin\Debug\Model.dll
+F:\c#\colone\kaoqinxitong\System\Model\bin\Debug\Model.pdb
+F:\c#\colone\kaoqinxitong\System\Model\obj\Debug\Model.dll
+F:\c#\colone\kaoqinxitong\System\Model\obj\Debug\Model.pdb
