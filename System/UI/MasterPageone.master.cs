@@ -12,7 +12,7 @@ public partial class MasterPageone : System.Web.UI.MasterPage
     protected void Page_Load(object sender, EventArgs e)
     {
         //DataTable dt = getDT("select city from city where judge=1");
-        string SQL = "select city from city where judge=1";
+        string SQL = "select city from tb_TreeView_Info where judge=1";
         DataTable dt = Class1.getDT(SQL);
 
         TreeNode Tn1 = new TreeNode();
@@ -25,7 +25,7 @@ public partial class MasterPageone : System.Web.UI.MasterPage
             TreeNode tn1 = new TreeNode();
             tn1.Text = dt.Rows[i][0].ToString();
             Tn1.ChildNodes.Add(tn1);
-            String SQL1 = "select city from city where bianhao=" + (i + 2) + " and judge=2";
+            String SQL1 = "select city from tb_TreeView_Info where bianhao=" + (i + 2) + " and judge=2";
             DataTable dt1 = Class1.getDT(SQL1);
           //  DataTable dt1 = getDT("select city from city where bianhao=" + (i + 2) + " and judge=2");
 
@@ -55,6 +55,10 @@ public partial class MasterPageone : System.Web.UI.MasterPage
         if (TreeView1.SelectedNode.Text == "本校教师")
         {
             Response.Redirect("Default.aspx");
+        }
+        else if(TreeView1.SelectedNode.Text == "导入数据")
+        {
+            Response.Redirect("LoadExcelToDataBase.aspx");
         }
         
     }

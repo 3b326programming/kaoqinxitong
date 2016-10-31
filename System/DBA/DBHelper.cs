@@ -19,14 +19,13 @@ namespace DBA
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(strSQL, conn);
             da.Fill(dt);
-            conn.Close();
-            
+            conn.Close();            
             return dt;
         }
         public static void Getdt(string strSQL,DataTable dt)
         {
-            string strConn1 = "data source=.;initial catalog=AttendanceSys_database;uid=sa;password=sa";
-            SqlConnection conn = new SqlConnection(strConn1);
+            //string strConn1 = "data source=.;initial catalog=AttendanceSys_database;uid=sa;password=sa";
+            SqlConnection conn = new SqlConnection(strConn);
             conn.Open();
 
             SqlDataAdapter da = new SqlDataAdapter(strSQL, conn);
@@ -41,8 +40,8 @@ namespace DBA
         public static void GETDTA(string strSQL)
         {
             
-            string strConn1 = "data source=.;initial catalog=AttendanceSys_database;uid=sa;password=sa";
-            SqlConnection conn1 = new SqlConnection(strConn1);
+            //string strConn1 = "data source=.;initial catalog=AttendanceSys_database;uid=sa;password=sa";
+            SqlConnection conn1 = new SqlConnection(strConn);
             conn1.Open();
             SqlCommand cmd = new SqlCommand(strSQL, conn1);
             cmd.ExecuteNonQuery();

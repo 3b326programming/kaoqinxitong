@@ -29,8 +29,8 @@
             runat="server" Width="600px" Font-Italic="False" Font-Overline="False" 
             Font-Size="Medium" Font-Strikeout="False" Font-Underline="False" 
             Height="22px"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button2" runat="server" Text="导  入" Width="109px" 
-            onclick="Button2_Click" onclientclick="Navigate()"/></td></tr>
+        <asp:Button ID="Button2" runat="server" Text="导  入" Width="109px" OnClientClick="Navigate()"
+            onclick="Button2_Click"/></td></tr>
     <tr><td><asp:Label ID="lblMessage2" runat="server" Font-Size="Small" 
             Text="lblMessage2"></asp:Label>
         </td></tr>
