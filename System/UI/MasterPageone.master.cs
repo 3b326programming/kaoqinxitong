@@ -11,31 +11,34 @@ public partial class MasterPageone : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        //DataTable dt = getDT("select city from city where judge=1");
-        string SQL = "select city from tb_TreeView_Info where judge=1";
-        DataTable dt = Class1.getDT(SQL);
-
-        TreeNode Tn1 = new TreeNode();
-        Tn1.Text = "管理员面板";
-        TreeView1.Nodes.Add(Tn1);
-
-        for (int i = 0; i < dt.Rows.Count; i++)
+        if (!IsPostBack)
         {
+            //DataTable dt = getDT("select city from city where judge=1");
+            string SQL = "select city from tb_TreeView_Info where judge=1";
+            DataTable dt = Class1.getDT(SQL);
 
-            TreeNode tn1 = new TreeNode();
-            tn1.Text = dt.Rows[i][0].ToString();
-            Tn1.ChildNodes.Add(tn1);
-            String SQL1 = "select city from tb_TreeView_Info where bianhao=" + (i + 2) + " and judge=2";
-            DataTable dt1 = Class1.getDT(SQL1);
-          //  DataTable dt1 = getDT("select city from city where bianhao=" + (i + 2) + " and judge=2");
+            TreeNode Tn1 = new TreeNode();
+            Tn1.Text = "管理员面板";
+            TreeView1.Nodes.Add(Tn1);
 
-            for (int j = 0; j < dt1.Rows.Count; j++)
+            for (int i = 0; i < dt.Rows.Count; i++)
             {
 
-                TreeNode tn2 = new TreeNode();
-                tn2.Text = dt1.Rows[j][0].ToString();
+                TreeNode tn1 = new TreeNode();
+                tn1.Text = dt.Rows[i][0].ToString();
+                Tn1.ChildNodes.Add(tn1);
+                String SQL1 = "select city from tb_TreeView_Info where bianhao=" + (i + 2) + " and judge=2";
+                DataTable dt1 = Class1.getDT(SQL1);
+                //  DataTable dt1 = getDT("select city from city where bianhao=" + (i + 2) + " and judge=2");
 
-                tn1.ChildNodes.Add(tn2);
+                for (int j = 0; j < dt1.Rows.Count; j++)
+                {
+
+                    TreeNode tn2 = new TreeNode();
+                    tn2.Text = dt1.Rows[j][0].ToString();
+
+                    tn1.ChildNodes.Add(tn2);
+                }
             }
         }
     }

@@ -11,6 +11,17 @@ namespace DBA
 {
     public class DBHelper
     {
+        public static DataTable GetDT(string SQL)
+        {
+           
+            SqlConnection conn = new SqlConnection(strConn);
+            conn.Open();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(SQL, conn);
+            da.Fill(dt);
+            conn.Close();
+            return dt;
+        }
         private static string strConn = ConfigurationManager.ConnectionStrings["MyConn"].ConnectionString;
         public static DataTable getDtFromSQL(string strSQL)
         {

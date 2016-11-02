@@ -12,6 +12,14 @@ namespace BLL
 {
     public class Class1
     {
+        public static DataTable Griview(string column, string name)
+        {
+            string SQL = "select * from tb_AllTeacher_Info where " + column + "='" + name + "'";
+
+            DataTable dt = DBHelper.GetDT(SQL);
+            return dt;
+
+        }
         public static bool Login(string userName, string password)
         {
 

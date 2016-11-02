@@ -18,3 +18,7 @@ F:\c#\colone\kaoqinxitong\System\DBA\bin\Debug\DBA.dll
 F:\c#\colone\kaoqinxitong\System\DBA\bin\Debug\DBA.pdb
 F:\c#\colone\kaoqinxitong\System\DBA\obj\Debug\DBA.dll
 F:\c#\colone\kaoqinxitong\System\DBA\obj\Debug\DBA.pdb
+C:\Users\hp\Desktop\kaoqinxitong888\kaoqinxitong\System\DBA\bin\Debug\DBA.dll
+C:\Users\hp\Desktop\kaoqinxitong888\kaoqinxitong\System\DBA\bin\Debug\DBA.pdb
+C:\Users\hp\Desktop\kaoqinxitong888\kaoqinxitong\System\DBA\obj\Debug\DBA.dll
+C:\Users\hp\Desktop\kaoqinxitong888\kaoqinxitong\System\DBA\obj\Debug\DBA.pdb
