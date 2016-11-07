@@ -82,10 +82,12 @@ namespace BLL
         {
             
             DataTable dt = DBHelper.LoadToExcel(currFilePath, "select * from [" + Department + "$]");
+           // DBHelper.SQlBulkCopy(dt);
             return dt;
         }
         //Excel文件导入SQL表
         public static string TeacherTable(string TableName,DataTable dt)
+           
         {
             //Upload();
             if (currFileExtension == ".xlsx" || currFileExtension == ".xls")
@@ -106,11 +108,12 @@ namespace BLL
                         return "选择的文件内容与数据库要求不匹配，请确认！";
                     }
                 }
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {                    
-                    DBHelper.GETDTA("insert into " + TableName + " values('" + dt.Rows[i][1].ToString() + "','" + dt.Rows[i][3].ToString() + "','" + dt.Rows[i][2].ToString() + "','" + dt.Rows[i][5].ToString() + "','" + dt.Rows[i][4].ToString() + "','" + dt.Rows[i][0].ToString() + "')");
-                }
+               // for (int i = 0; i < dt.Rows.Count; i++)
+              //  {                    
+                 //   DBHelper.GETDTA("insert into " + TableName + " values('" + dt.Rows[i][1].ToString() + "','" + dt.Rows[i][3].ToString() + "','" + dt.Rows[i][2].ToString() + "','" + dt.Rows[i][5].ToString() + "','" + dt.Rows[i][4].ToString() + "','" + dt.Rows[i][0].ToString() + "')");
+              //  }
                 //DBHelper.Getdt("select * from "+TableName,dt);
+                DBHelper.SQlBulkCopy(TableName,dt);
                 return "导入成功QAQ";
             }
             else
@@ -137,10 +140,11 @@ namespace BLL
                         return "选择的文件内容与数据库要求不匹配，请确认!";
                     }
                 }
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {
-                    DBHelper.GETDTA("insert into tb_AllInformation values('" + dt.Rows[i][0].ToString() + "','" + dt.Rows[i][1].ToString() + "','" + dt.Rows[i][2].ToString() + "','" + dt.Rows[i][3].ToString() + "','" + dt.Rows[i][4].ToString() + "','" + dt.Rows[i][5].ToString() + "','" + dt.Rows[i][6].ToString() + "','" + dt.Rows[i][7].ToString() + "','" + dt.Rows[i][8].ToString() + "','" + dt.Rows[i][9].ToString() + "','" + dt.Rows[i][10].ToString() + "','" + dt.Rows[i][11].ToString() + "','" + dt.Rows[i][12].ToString() + "','" + dt.Rows[i][13].ToString() + "')");
-                }
+                //for (int i = 0; i < dt.Rows.Count; i++)
+                //{
+                //    DBHelper.GETDTA("insert into tb_AllInformation values('" + dt.Rows[i][0].ToString() + "','" + dt.Rows[i][1].ToString() + "','" + dt.Rows[i][2].ToString() + "','" + dt.Rows[i][3].ToString() + "','" + dt.Rows[i][4].ToString() + "','" + dt.Rows[i][5].ToString() + "','" + dt.Rows[i][6].ToString() + "','" + dt.Rows[i][7].ToString() + "','" + dt.Rows[i][8].ToString() + "','" + dt.Rows[i][9].ToString() + "','" + dt.Rows[i][10].ToString() + "','" + dt.Rows[i][11].ToString() + "','" + dt.Rows[i][12].ToString() + "','" + dt.Rows[i][13].ToString() + "')");
+                //}
+                DBHelper.SQlBulkCopy(TableName, dt);
 
                 return "导入成功QAQ";
             }

@@ -48,6 +48,31 @@ namespace DBA
             conn.Close();
 
         }
+        public static void SQlBulkCopy(string filename,DataTable dt)
+        {
+            SqlConnection conns = new SqlConnection(strConn);
+            conns.Open();
+            SqlBulkCopy sqlbulkCopy = new SqlBulkCopy(conns);
+            // sqlbulkCopy.DestinationTableName = "tb_AllTeacher_Info";
+           
+            sqlbulkCopy.DestinationTableName = filename;
+
+            sqlbulkCopy.ColumnMappings.Add("部门", "Department");
+            sqlbulkCopy.ColumnMappings.Add("工号", "UserID");
+            sqlbulkCopy.ColumnMappings.Add("密码", "UserPWD");
+            sqlbulkCopy.ColumnMappings.Add("姓名", "UserName");
+            sqlbulkCopy.ColumnMappings.Add("性别", "sex");
+            sqlbulkCopy.ColumnMappings.Add("权限", "Role");
+            sqlbulkCopy.WriteToServer(dt);
+           
+          
+        
+
+
+
+
+
+        }
         public static void GETDTA(string strSQL)
         {
             
@@ -63,7 +88,7 @@ namespace DBA
         public static DataTable LoadToExcel(string currFilePath, string strSQL)
         {
 
-            string strConn = "Provider=Microsoft.ACE.OLEDB.12.0;data Source='" + currFilePath + "';Extended Properties='Excel 8.0;HDR=Yes;IMEX=1';";
+            string strConn = "Provider=Microsoft.jet.oledb.4.0;data Source='" + currFilePath + "';Extended Properties=Excel 8.0";
             OleDbConnection conn = new OleDbConnection(strConn);
             conn.Open();
             conn.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, new object[] { null, null, null, "Table" });

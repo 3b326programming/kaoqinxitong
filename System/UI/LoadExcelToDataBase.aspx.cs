@@ -37,6 +37,7 @@ public partial class LoadExcelToDataBase : System.Web.UI.Page
                 file.SaveAs(Class1.Upload(fileName));
                 Class1.Clear("tb_AllTeacher_Info");
                 lblMessage1.Text = Class1.TeacherTable("tb_AllTeacher_Info", Class1.LoadToExcel("Sheet1"));
+                //lblMessage1.Text = Class1.TeacherTable( Class1.LoadToExcel("Sheet1"));
             }
             else
             {
