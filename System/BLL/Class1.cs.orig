@@ -123,11 +123,15 @@ namespace BLL
                 return "导入的文件类型必须是Excel文件！";
             }
         }
-        public static string ReadCourseExcelToSQL(string TableName, DataTable dt)
+<<<<<<< HEAD
+        public static void judge(string filename, string deparmtent)
         { 
            
         }
         public static string CourseTable(string TableName, DataTable dt)
+=======
+        public static string ReadCourseExcelToSQL(string TableName, DataTable dt)
+>>>>>>> c2b07a152f8f38cd062338c57ead54ac9b529776
         {
             
             if (currFileExtension == ".xlsx" || currFileExtension == ".xls")

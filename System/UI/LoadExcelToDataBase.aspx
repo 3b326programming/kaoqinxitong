@@ -3,7 +3,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
     <script type="text/javascript">
         function Navigate() {
-            document.getElementById("lblMessage2").text = "查询中，请稍后QAQ";
+            document.getElementById("lblMessage2").Text = "查询中，请稍后QAQ";
+            alert("wocao ");
+            return false;
+            
+
         }    
       
     </script>
@@ -48,7 +52,7 @@
         <asp:Button ID="Button2" runat="server" Text="导入" Width="109px" OnClientClick="Navigate()"
             onclick="Button2_Click" CssClass="btn"/></td></tr>
     <tr><td><asp:Label ID="lblMessage2" runat="server" Font-Size="Small" 
-            Text="lblMessage2"></asp:Label>
+            ></asp:Label>
         </td></tr>
 
     <tr><td style="background-color:#3FF"><img alt="" src="images/more3.jpg" />导入本学期校历</td></tr>

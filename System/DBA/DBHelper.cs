@@ -111,13 +111,21 @@ namespace DBA
         {
             
             //string strConn1 = "data source=.;initial catalog=AttendanceSys_database;uid=sa;password=sa";
-            SqlConnection conn1 = new SqlConnection(strConn);
-            conn1.Open();
-            SqlCommand cmd = new SqlCommand(strSQL, conn1);
+            SqlConnection conn = new SqlConnection(strConn);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand(strSQL, conn);
             cmd.ExecuteNonQuery();
-            conn1.Close();
+            conn.Close();
 
 
+        }
+        public static void GetdtToSQL(string TableName,DataTable dt)
+        {
+            SqlConnection conn = new SqlConnection(strConn);
+            conn.Open();
+            SqlBulkCopy bulkCopy = new SqlBulkCopy(conn);
+            bulkCopy.DestinationTableName = TableName;            
+            bulkCopy.WriteToServer(dt);            
         }
         public static DataTable LoadToExcel(string currFilePath, string strSQL)
         {
