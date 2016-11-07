@@ -23,9 +23,11 @@ public partial class LoadExcelToDataBase : System.Web.UI.Page
             DropDownList1.Items.Add("食品工程系");
             DropDownList1.Items.Add("建筑工程系");
         }
+       
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
+        
         HttpPostedFile file = FileUpload1.PostedFile;
         string fileName = file.FileName;
         if (RadioButton1.Checked)
@@ -45,6 +47,7 @@ public partial class LoadExcelToDataBase : System.Web.UI.Page
                 lblMessage1.Text = "文件为空，请重新选择！";
 
             }
+            RadioButton1.Checked = false;
         }
         else if (RadioButton2.Checked)
         {
@@ -59,6 +62,7 @@ public partial class LoadExcelToDataBase : System.Web.UI.Page
             {
                 lblMessage1.Text = "文件为空，请重新选择！";
             }
+            RadioButton2.Checked = false;
         }
         else
         {

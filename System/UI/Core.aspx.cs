@@ -18,11 +18,11 @@ public partial class Core : System.Web.UI.Page
             strCode += rd.Next(10).ToString();
         }
         Session["Code"] = strCode;
-        Bitmap bmp = new Bitmap(80, 20);
+        Bitmap bmp = new Bitmap(65, 24);
         for (int i = 0; i <= 30; i++)
         {
-            int x = rd.Next(80);
-            int y = rd.Next(20);
+            int x = rd.Next(65);
+            int y = rd.Next(24);
             bmp.SetPixel(x, y, Color.FromArgb(rd.Next(255), rd.Next(255), rd.Next(255)));
         }
         Graphics g = Graphics.FromImage(bmp);
@@ -30,10 +30,10 @@ public partial class Core : System.Web.UI.Page
         g.DrawString(strCode, fnt, Brushes.AliceBlue, 0, 0);
         for (int i = 0; i <= 4; i++)
         {
-            int x1 = rd.Next(80);
-            int y1 = rd.Next(20);
-            int x2 = rd.Next(80);
-            int y2 = rd.Next(20);
+            int x1 = rd.Next(65);
+            int y1 = rd.Next(24);
+            int x2 = rd.Next(65);
+            int y2 = rd.Next(24);
             g.DrawLine(new Pen(Color.FromArgb(rd.Next(255), rd.Next(255), rd.Next(255))), x1, y1, x2, y2);
         }
         bmp.Save(Response.OutputStream, ImageFormat.Gif);

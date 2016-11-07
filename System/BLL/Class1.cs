@@ -23,7 +23,7 @@ namespace BLL
         public static bool Login(string userName, string password)
         {
 
-            DataTable dt = DBHelper.getDtFromSQL("select uid from Login where uid='" + userName + "' and password='" + password + "'");
+            DataTable dt = DBHelper.getDtFromSQL("select * from tb_AllTeacher_Info where UserID='" + userName + "' and UserPWD='" + password + "'");
 
             if (dt.Rows.Count == 0)
             {
@@ -40,7 +40,7 @@ namespace BLL
 
         public static string getUserrode(string userName)
         {
-            DataTable dt = DBHelper.getDtFromSQL("select userrode from Login where uid='" + userName + "'");
+            DataTable dt = DBHelper.getDtFromSQL("select Role from tb_AllTeacher_Info where UserID='" + userName + "'");
             return dt.Rows[0][0].ToString();
         }
         public static DataTable getClass()
@@ -121,8 +121,13 @@ namespace BLL
                 return "导入的文件类型必须是Excel文件！";
             }
         }
+        public static void judge(string filename, string deparmtent)
+        { 
+           
+        }
         public static string CourseTable(string TableName, DataTable dt)
         {
+            
             if (currFileExtension == ".xlsx" || currFileExtension == ".xls")
             {
                 string[] Content = { "承担单位", "任课教师", "上课时间/地点", "课程", "所属部门", "学分", "总学时", "上课班级名称", "院(系)部", "学号", "姓名", "行政班级", "性别", "课程类别1", "课程类别2" };

@@ -7,7 +7,8 @@
     <title></title>
  <style type="text/css">
       
-      *{overflow:hidden; font-size:9pt;}
+      *{overflow:hidden; font-size:9pt;
+       padding:0px;}
       .d
       {
           width:95px;
@@ -27,8 +28,8 @@
 	        }
 	   .s
       {
-          width:164px;
-          height:32px;
+          width:135px;
+          height:21px;
           background-image:url(images/inputbg.gif)
           background-repeat:repeat-x;
           border:solid 1px #d1d1d1;
@@ -53,7 +54,7 @@
             <td height="190"><table width="100%" border="0" cellspacing="0" cellpadding="0">
               <tr>
                 <td width="208" height="190" style="background:url(images/login02.jpg)">&nbsp;</td>
-                <td width="518" style="background:url(images/login03.jpg)"><table width="320" border="0" align="center" cellpadding="0" cellspacing="0">
+                <td width="518" height="190"style="background:url(images/login03.jpg) "><table width="320" border="0" align="center" cellpadding="0" cellspacing="0">
                   <tr>
                     <td width="40" height="40"><img src="images/user.gif" width="30" height="30"></td>
                     <td width="40" height="40">用户</td>
@@ -70,7 +71,7 @@
                     <tr>
                     <td height="40">&nbsp;</td>
                     <td height="40">验证码</td>
-                    <td height="40" ><asp:TextBox ID="TextBox3" runat="server"  CssClass="s" ></asp:TextBox> <img src="Core.aspx" alt="验证字符" style="width:65;height:21; vertical-align:top;">
+                    <td height="40" ><asp:TextBox ID="TextBox3" runat="server" CssClass="s"></asp:TextBox> <img src="Core.aspx" alt="验证字符" style="width:65;height:21; vertical-align:top;">
                        </td>
                     </tr>
                   <tr>
@@ -81,7 +82,7 @@
                             ID="Button1" runat="server" onclick="Button1_Click" CssClass="d"/></td>
                   </tr>
                 </table></td>
-                <td width="214" style="background:url(images/login04.jpg)" >&nbsp;</td>
+                <td width="212" style="background:url(images/login04.jpg)" >&nbsp;</td>
               </tr>
             </table></td>
           </tr>
@@ -99,5 +100,5 @@
 
    
     </form>
-</body>--%>
+</body>
 </html>
