@@ -50,7 +50,7 @@ namespace BLL
         public static string currFilePath = string.Empty;
         public static string currFileExtension = string.Empty;
         //修改名字并复制上传Excel文件
-        public static string Upload(string fileName)
+        public static string UploadExcel(string fileName)
         {
             
             
@@ -70,14 +70,14 @@ namespace BLL
            
         }
         //Excel文件导入datatable
-        public static DataTable LoadToExcel(string Department)
+        public static DataTable ReadExcelToDatatable(string Department)
         {
             
             DataTable dt = DBHelper.LoadToExcel(currFilePath, "select * from [" + Department + "$]");
             return dt;
         }
         //Excel文件导入SQL表
-        public static string TeacherTable(string TableName,DataTable dt)
+        public static string ReadTeacherExceltoSQL(string TableName,DataTable dt)
         {
             //Upload();
             if (currFileExtension == ".xlsx" || currFileExtension == ".xls")
@@ -102,6 +102,8 @@ namespace BLL
                 {                    
                     DBHelper.GETDTA("insert into " + TableName + " values('" + dt.Rows[i][1].ToString() + "','" + dt.Rows[i][3].ToString() + "','" + dt.Rows[i][2].ToString() + "','" + dt.Rows[i][5].ToString() + "','" + dt.Rows[i][4].ToString() + "','" + dt.Rows[i][0].ToString() + "')");
                 }
+        
+
                 //DBHelper.Getdt("select * from "+TableName,dt);
                 return "导入成功QAQ";
             }
@@ -110,7 +112,7 @@ namespace BLL
                 return "导入的文件类型必须是Excel文件！";
             }
         }
-        public static string CourseTable(string TableName, DataTable dt)
+        public static string ReadCourseExcelToSQL(string TableName, DataTable dt)
         {
             if (currFileExtension == ".xlsx" || currFileExtension == ".xls")
             {
@@ -129,9 +131,41 @@ namespace BLL
                         return "选择的文件内容与数据库要求不匹配，请确认!";
                     }
                 }
+                //for (int i = 0; i < dt.Rows.Count; i++)
+                //{
+                //    DBHelper.GETDTA("insert into tb_AllInformation values('" + dt.Rows[i][0].ToString() + "','" + dt.Rows[i][1].ToString() + "','" + dt.Rows[i][2].ToString() + "','" + dt.Rows[i][3].ToString() + "','" + dt.Rows[i][4].ToString() + "','" + dt.Rows[i][5].ToString() + "','" + dt.Rows[i][6].ToString() + "','" + dt.Rows[i][7].ToString() + "','" + dt.Rows[i][8].ToString() + "','" + dt.Rows[i][9].ToString() + "','" + dt.Rows[i][10].ToString() + "','" + dt.Rows[i][11].ToString() + "','" + dt.Rows[i][12].ToString() + "','" + dt.Rows[i][13].ToString() + "')");
+                //}
+                DBHelper.GetdtToSQL(TableName,dt);
+
+                return "导入成功QAQ";
+            }
+            else
+            {
+                return "导入的文件类型必须是Excel文件！";
+            }
+        }
+        public static string ReadCalendarExcelToSQL(string TableName, DataTable dt)
+        {
+            if (currFileExtension == ".xlsx" || currFileExtension == ".xls")
+            {
+                string[] Content = { "周次", "起", "止" };
+                for (int i = 0; i < 3; i++)
+                {
+                    try
+                    {
+                        if (dt.Rows[0][i].ToString().Contains(Content[i]))
+                        {
+                            return "选择的文件内容与数据库要求不匹配，请确认！";
+                        }
+                    }
+                    catch
+                    {
+                        return "选择的文件内容与数据库要求不匹配，请确认!";
+                    }
+                }
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    DBHelper.GETDTA("insert into tb_AllInformation values('" + dt.Rows[i][0].ToString() + "','" + dt.Rows[i][1].ToString() + "','" + dt.Rows[i][2].ToString() + "','" + dt.Rows[i][3].ToString() + "','" + dt.Rows[i][4].ToString() + "','" + dt.Rows[i][5].ToString() + "','" + dt.Rows[i][6].ToString() + "','" + dt.Rows[i][7].ToString() + "','" + dt.Rows[i][8].ToString() + "','" + dt.Rows[i][9].ToString() + "','" + dt.Rows[i][10].ToString() + "','" + dt.Rows[i][11].ToString() + "','" + dt.Rows[i][12].ToString() + "','" + dt.Rows[i][13].ToString() + "')");
+                    DBHelper.GETDTA("insert into tb_Calendar values('" + dt.Rows[i][0].ToString() + "','" + dt.Rows[i][1].ToString() + "','" + dt.Rows[i][2].ToString() + "')");
                 }
 
                 return "导入成功QAQ";

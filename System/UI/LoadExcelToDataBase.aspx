@@ -3,7 +3,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
     <script type="text/javascript">
         function Navigate() {
-            document.getElementById("lblMessage2").text = "查询中，请稍后QAQ";
+            document.getElementById("lblMessage2").Text = "查询中，请稍后QAQ";
+            alert("wocao ");
+            return false;
+            
+
         }    
       
     </script>
@@ -29,10 +33,10 @@
             runat="server" Width="600px" Font-Italic="False" Font-Overline="False" 
             Font-Size="Medium" Font-Strikeout="False" Font-Underline="False" 
             Height="22px"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button2" runat="server" Text="导  入" Width="109px" OnClientClick="Navigate()"
+        <asp:Button ID="Button2" runat="server" Text="导  入" Width="106px" OnClientClick="return Navigate()"
             onclick="Button2_Click"/></td></tr>
     <tr><td><asp:Label ID="lblMessage2" runat="server" Font-Size="Small" 
-            Text="lblMessage2"></asp:Label>
+            ></asp:Label>
         </td></tr>
 
     <tr><td style="background-color:#3FF"><img alt="" src="images/more3.jpg" />导入本学期校历</td></tr>
@@ -40,7 +44,8 @@
             runat="server" Width="600px" Font-Italic="False" Font-Overline="False" 
             Font-Size="Medium" Font-Strikeout="False" Font-Underline="False" 
            Height="22px"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button3" runat="server" Text="导  入" Width="109px" /></td></tr>
+        <asp:Button ID="Button3" runat="server" Text="导  入" Width="109px" 
+           onclick="Button3_Click" /></td></tr>
     <tr><td><asp:Label ID="lblMessage5" runat="server" Font-Size="Small" 
             Text="lblMessage5"></asp:Label></td></tr>
     <tr><td style="background-color:#3FF"><img alt="" src="images/more3.jpg" />录入各系部人数</td></tr>

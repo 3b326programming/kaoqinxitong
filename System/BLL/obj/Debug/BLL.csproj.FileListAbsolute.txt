@@ -33,3 +33,10 @@ F:\c#\colone\kaoqinxitong\System\BLL\bin\Debug\DBA.pdb
 F:\c#\colone\kaoqinxitong\System\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 F:\c#\colone\kaoqinxitong\System\BLL\obj\Debug\BLL.dll
 F:\c#\colone\kaoqinxitong\System\BLL\obj\Debug\BLL.pdb
+F:\shiyan\kaoqinxitong\System\BLL\bin\Debug\BLL.dll
+F:\shiyan\kaoqinxitong\System\BLL\bin\Debug\BLL.pdb
+F:\shiyan\kaoqinxitong\System\BLL\bin\Debug\DBA.dll
+F:\shiyan\kaoqinxitong\System\BLL\bin\Debug\DBA.pdb
+F:\shiyan\kaoqinxitong\System\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+F:\shiyan\kaoqinxitong\System\BLL\obj\Debug\BLL.dll
+F:\shiyan\kaoqinxitong\System\BLL\obj\Debug\BLL.pdb
