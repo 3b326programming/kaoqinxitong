@@ -61,12 +61,46 @@ namespace DBA
             sqlbulkCopy.ColumnMappings.Add("工号", "UserID");
             sqlbulkCopy.ColumnMappings.Add("密码", "UserPWD");
             sqlbulkCopy.ColumnMappings.Add("姓名", "UserName");
-            sqlbulkCopy.ColumnMappings.Add("性别", "sex");
+            sqlbulkCopy.ColumnMappings.Add("性别", "Sex");
             sqlbulkCopy.ColumnMappings.Add("权限", "Role");
             sqlbulkCopy.WriteToServer(dt);
            
           
         
+
+
+
+
+
+        }
+        public static void SQlBulkCopys(string filename, DataTable dt)
+        {
+            SqlConnection connss = new SqlConnection(strConn);
+            connss.Open();
+            SqlBulkCopy sqlbulkCopy = new SqlBulkCopy(connss);
+            // sqlbulkCopy.DestinationTableName = "tb_AllTeacher_Info";
+
+            sqlbulkCopy.DestinationTableName = filename;
+
+            //sqlbulkCopy.ColumnMappings.Add("承担单位", "TeaDepartment");
+            //sqlbulkCopy.ColumnMappings.Add("任课教师", "Teacher");
+            //sqlbulkCopy.ColumnMappings.Add("上课时间/地点", "TimeAndArea");
+            //sqlbulkCopy.ColumnMappings.Add("课程", "Course");
+            //sqlbulkCopy.ColumnMappings.Add("所属部门", "CourseDepartment");
+            //sqlbulkCopy.ColumnMappings.Add("学分", "Credit");
+            //sqlbulkCopy.ColumnMappings.Add("总学时", "Role");
+            //sqlbulkCopy.ColumnMappings.Add("上课班级名称", "Role");
+            //sqlbulkCopy.ColumnMappings.Add("院(系)/部", "Role");
+            //sqlbulkCopy.ColumnMappings.Add("学号", "Role");
+            //sqlbulkCopy.ColumnMappings.Add("姓名", "Role");
+            //sqlbulkCopy.ColumnMappings.Add("行政班级", "Role");
+            //sqlbulkCopy.ColumnMappings.Add("性别", "Role");
+            //sqlbulkCopy.ColumnMappings.Add("课程类别1", "Role");
+            //sqlbulkCopy.ColumnMappings.Add("课程类别2", "Role");
+            sqlbulkCopy.WriteToServer(dt);
+
+
+
 
 
 

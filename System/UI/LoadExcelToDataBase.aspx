@@ -27,7 +27,7 @@
 
     <tr style="background-color:#3FF"><td><img alt="" src="images/more3.jpg" />导入教师基本信息</td></tr>
     <tr style="height:18px"><td style="padding-left:200px">
-        <asp:RadioButton ID="RadioButton1" runat="server" Text="本校教师" />
+        <asp:RadioButton ID="RadioButton1" runat="server" Text="本校教师"/>
         <asp:RadioButton ID="RadioButton2" runat="server" Text="外聘教师" /></td></tr>
     <tr ><td>请选择要导入的文件<asp:FileUpload ID="FileUpload1" 
             runat="server" Width="600px" Font-Italic="False" Font-Overline="False" 
