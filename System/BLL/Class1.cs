@@ -124,10 +124,6 @@ namespace BLL
             }
         }
         public static string ReadCourseExcelToSQL(string TableName, DataTable dt)
-        { 
-           
-        }
-        public static string CourseTable(string TableName, DataTable dt)
         {
             
             if (currFileExtension == ".xlsx" || currFileExtension == ".xls")

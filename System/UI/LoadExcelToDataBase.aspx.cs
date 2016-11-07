@@ -8,6 +8,7 @@ using BLL;
 
 public partial class LoadExcelToDataBase : System.Web.UI.Page
 {
+    
     HttpPostedFile file;
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -29,8 +30,8 @@ public partial class LoadExcelToDataBase : System.Web.UI.Page
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
-         file = FileUpload1.PostedFile;
-        HttpPostedFile file = FileUpload1.PostedFile;
+        
+        file = FileUpload1.PostedFile;
         string fileName = file.FileName;
         if (RadioButton1.Checked)
         {
@@ -38,9 +39,9 @@ public partial class LoadExcelToDataBase : System.Web.UI.Page
             
             if (fileName != string.Empty)
             {
+              
+
                 file.SaveAs(Class1.UploadExcel(fileName));
-               
-                file.SaveAs(Class1.Upload(fileName));
                 Class1.Clear("tb_AllTeacher_Info");
                 lblMessage1.Text = Class1.ReadTeacherExceltoSQL("tb_AllTeacher_Info", Class1.ReadExcelToDatatable("Sheet1"));
                 //lblMessage1.Text = Class1.TeacherTable( Class1.LoadToExcel("Sheet1"));
