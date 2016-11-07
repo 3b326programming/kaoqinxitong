@@ -32,13 +32,14 @@ public partial class LoadExcelToDataBase : System.Web.UI.Page
         string fileName = file.FileName;
         if (RadioButton1.Checked)
         {
-            
+           // RadioButton1.AutoCheck = true;
             
             if (fileName != string.Empty)
             {
                 file.SaveAs(Class1.UploadExcel(fileName));
                 Class1.Clear("tb_AllTeacher_Info");
                 lblMessage1.Text = Class1.ReadTeacherExceltoSQL("tb_AllTeacher_Info", Class1.ReadExcelToDatatable("Sheet1"));
+                //lblMessage1.Text = Class1.TeacherTable( Class1.LoadToExcel("Sheet1"));
             }
             else
             {
@@ -48,6 +49,7 @@ public partial class LoadExcelToDataBase : System.Web.UI.Page
         }
         else if (RadioButton2.Checked)
         {
+            
             if (fileName != string.Empty)
             {
                 file.SaveAs(Class1.UploadExcel(fileName));
@@ -74,7 +76,7 @@ public partial class LoadExcelToDataBase : System.Web.UI.Page
         {
             
             file.SaveAs(Class1.UploadExcel(fileName));
-            
+
             lblMessage2.Text = Class1.ReadCourseExcelToSQL("tb_AllInformation", Class1.ReadExcelToDatatable(DropDownList1.SelectedItem.ToString()));
         }
         else

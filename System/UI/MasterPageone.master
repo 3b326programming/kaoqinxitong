@@ -49,6 +49,7 @@
              background-repeat:repeat-y;
              font-family:@方正兰亭超细黑简体 @微软雅黑;
              color:red;
+            
              
             
              }
@@ -101,7 +102,7 @@
 <body>
     <form id="form1" runat="server">
      <div id="main">
-        <div id="top"><img src="images/xin.gif" />
+        <div id="top"><img src="images/xin_01_s.jpg" />
         
         </div>
         <div id="content">
@@ -125,10 +126,10 @@
          
           <asp:TreeNodeStyle ChildNodesPadding="5" 
              
-            Font-Size="10pt"  Font-Bold="true"  ForeColor="black"  
+            Font-Size="11pt"  Font-Bold="true"  ForeColor="black"  
             />
           <asp:TreeNodeStyle ChildNodesPadding="10" 
-            Font-Size="8pt" Font-Italic="true" ForeColor="black" Font-Bold="true"  
+            Font-Size="10pt" Font-Bold="true" ForeColor="black"  
             />
              
         </LevelStyles>

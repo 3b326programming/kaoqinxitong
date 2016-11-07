@@ -11,6 +11,17 @@ namespace DBA
 {
     public class DBHelper
     {
+        public static DataTable GetDT(string SQL)
+        {
+           
+            SqlConnection conn = new SqlConnection(strConn);
+            conn.Open();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(SQL, conn);
+            da.Fill(dt);
+            conn.Close();
+            return dt;
+        }
         private static string strConn = ConfigurationManager.ConnectionStrings["MyConn"].ConnectionString;
         public static DataTable getDtFromSQL(string strSQL)
         {
@@ -37,6 +48,65 @@ namespace DBA
             conn.Close();
 
         }
+        public static void SQlBulkCopy(string filename,DataTable dt)
+        {
+            SqlConnection conns = new SqlConnection(strConn);
+            conns.Open();
+            SqlBulkCopy sqlbulkCopy = new SqlBulkCopy(conns);
+            // sqlbulkCopy.DestinationTableName = "tb_AllTeacher_Info";
+           
+            sqlbulkCopy.DestinationTableName = filename;
+
+            sqlbulkCopy.ColumnMappings.Add("部门", "Department");
+            sqlbulkCopy.ColumnMappings.Add("工号", "UserID");
+            sqlbulkCopy.ColumnMappings.Add("密码", "UserPWD");
+            sqlbulkCopy.ColumnMappings.Add("姓名", "UserName");
+            sqlbulkCopy.ColumnMappings.Add("性别", "Sex");
+            sqlbulkCopy.ColumnMappings.Add("权限", "Role");
+            sqlbulkCopy.WriteToServer(dt);
+           
+          
+        
+
+
+
+
+
+        }
+        public static void SQlBulkCopys(string filename, DataTable dt)
+        {
+            SqlConnection connss = new SqlConnection(strConn);
+            connss.Open();
+            SqlBulkCopy sqlbulkCopy = new SqlBulkCopy(connss);
+            // sqlbulkCopy.DestinationTableName = "tb_AllTeacher_Info";
+
+            sqlbulkCopy.DestinationTableName = filename;
+
+            //sqlbulkCopy.ColumnMappings.Add("承担单位", "TeaDepartment");
+            //sqlbulkCopy.ColumnMappings.Add("任课教师", "Teacher");
+            //sqlbulkCopy.ColumnMappings.Add("上课时间/地点", "TimeAndArea");
+            //sqlbulkCopy.ColumnMappings.Add("课程", "Course");
+            //sqlbulkCopy.ColumnMappings.Add("所属部门", "CourseDepartment");
+            //sqlbulkCopy.ColumnMappings.Add("学分", "Credit");
+            //sqlbulkCopy.ColumnMappings.Add("总学时", "Role");
+            //sqlbulkCopy.ColumnMappings.Add("上课班级名称", "Role");
+            //sqlbulkCopy.ColumnMappings.Add("院(系)/部", "Role");
+            //sqlbulkCopy.ColumnMappings.Add("学号", "Role");
+            //sqlbulkCopy.ColumnMappings.Add("姓名", "Role");
+            //sqlbulkCopy.ColumnMappings.Add("行政班级", "Role");
+            //sqlbulkCopy.ColumnMappings.Add("性别", "Role");
+            //sqlbulkCopy.ColumnMappings.Add("课程类别1", "Role");
+            //sqlbulkCopy.ColumnMappings.Add("课程类别2", "Role");
+            sqlbulkCopy.WriteToServer(dt);
+
+
+
+
+
+
+
+
+        }
         public static void GETDTA(string strSQL)
         {
             
@@ -60,7 +130,7 @@ namespace DBA
         public static DataTable LoadToExcel(string currFilePath, string strSQL)
         {
 
-            string strConn = "Provider=Microsoft.ACE.OLEDB.12.0;data Source='" + currFilePath + "';Extended Properties='Excel 8.0;HDR=Yes;IMEX=1';";
+            string strConn = "Provider=Microsoft.jet.oledb.4.0;data Source='" + currFilePath + "';Extended Properties=Excel 8.0";
             OleDbConnection conn = new OleDbConnection(strConn);
             conn.Open();
             conn.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, new object[] { null, null, null, "Table" });
