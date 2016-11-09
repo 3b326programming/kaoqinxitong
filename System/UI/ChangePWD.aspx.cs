@@ -20,10 +20,23 @@ public partial class ChangePWD : System.Web.UI.Page
     protected void Button1_Click(object sender, EventArgs e)
     {
 
-        string name = changepwd.getpwd(TextBox1.Text).Rows[0][0].ToString();
         if (TextBox3.Text == TextBox4.Text)
         {
-            Response.Write("<script>alert('修改成功')</script>");
+            if (BLL.changepwd.getid(TextBox1.Text).Rows.Count == 0)
+            {
+                string pwd = changepwd.getPTTpwd(TextBox1.Text).Rows[0][0].ToString();
+                BLL.changepwd.UpdatePTTpwd(TextBox3.Text, pwd);
+                Response.Write("<script>alert('修改成功')</script>");
+                TextBox1.Text = "";
+            }
+            else if (BLL.changepwd.getid(TextBox1.Text).Rows.Count != 0)
+            {
+                string pwd = changepwd.getpwd(TextBox1.Text).Rows[0][0].ToString();
+                BLL.changepwd.UpdatePwd(TextBox3.Text, pwd);
+                Response.Write("<script>alert('修改成功')</script>");
+                TextBox1.Text = "";
+            }
+
         }
 
         else if (TextBox3.Text != TextBox4.Text)
@@ -31,17 +44,36 @@ public partial class ChangePWD : System.Web.UI.Page
             Response.Write("<script>alert('两次输入的新密码不相符')</script>");
             TextBox3.Text = "";
             TextBox4.Text = "";
+            TextBox1.Text = "";
         }
     }
     protected void Button2_Click(object sender, EventArgs e)
     {
-        string name = BLL.changepwd.getpwd(TextBox1.Text).Rows[0][0].ToString();
-        Label1.Visible = true;
-        Label2.Visible = true;
-        Label3.Visible = true;
-        TextBox3.Visible = true;
-        TextBox4.Visible = true;
-        Button1.Visible = true;
-        Label1.Text = "您即将对" + name + "的账户更改密码";
+        if (BLL.changepwd.getid(TextBox1.Text).Rows.Count == 0)
+        {
+            string name = BLL.changepwd.getPTTid(TextBox1.Text).Rows[0][0].ToString();
+            Label1.Text = "您即将对" + name + "的账户更改密码";
+            Label1.Visible = true;
+            Label2.Visible = true;
+            Label3.Visible = true;
+            TextBox3.Visible = true;
+            TextBox4.Visible = true;
+            Button1.Visible = true;
+        }
+        else if (BLL.changepwd.getid(TextBox1.Text).Rows.Count != 0)
+        {
+            string name = BLL.changepwd.getid(TextBox1.Text).Rows[0][0].ToString();
+            Label1.Text = "您即将对" + name + "的账户更改密码";
+            Label1.Visible = true;
+            Label2.Visible = true;
+            Label3.Visible = true;
+            TextBox3.Visible = true;
+            TextBox4.Visible = true;
+            Button1.Visible = true;
+        }
+        else if (TextBox1.Text == "")
+        {
+            Response.Write("<script>alert('请输入工号')</script>");
+        }
     }
 }

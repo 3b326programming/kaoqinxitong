@@ -67,6 +67,10 @@ public partial class MasterPageone : System.Web.UI.MasterPage
         {
             Response.Redirect("EmptyData.aspx");
         }
+        else if (TreeView1.SelectedNode.Text == "修改密码")
+        {
+            Response.Redirect("ChangePWD.aspx");
+        }
 
         
     }
