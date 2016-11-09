@@ -63,6 +63,11 @@ public partial class MasterPageone : System.Web.UI.MasterPage
         {
             Response.Redirect("LoadExcelToDataBase.aspx");
         }
+        else if (TreeView1.SelectedNode.Text == "清空数据")
+        {
+            Response.Redirect("EmptyData.aspx");
+        }
+
         
     }
 }
