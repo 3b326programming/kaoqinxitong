@@ -11,17 +11,17 @@ namespace BLL
     {
         public static void UpdatePwd(string userPwd, string userPWD)
         {
-            string strSQL = "update tb_ALLTeacher_Info set userPWD='" + userPwd + "' where userPWD='" + userPWD + "'";
+            string strSQL = "update tb_AllTeacher_Info set userPWD='" + userPwd + "' where userPWD='" + userPWD + "'";
             DBHelper.GETDTA(strSQL);
         }
         public static DataTable getid(string userId)
         {
-            string strSQL = "select Username from tb_ALLTeacher_Info where UserID='" + userId + "'";
+            string strSQL = "select Username from tb_AllTeacher_Info where UserID='" + userId + "'";
             return DBHelper.getDtFromSQL(strSQL);
         }
         public static DataTable getpwd(string userId)
         {
-            string strSQL = "select UserPWD from tb_ALLTeacher_Info where UserID='" + userId + "'";
+            string strSQL = "select UserPWD from tb_AllTeacher_Info where UserID='" + userId + "'";
             return DBHelper.getDtFromSQL(strSQL);
         }
         public static DataTable getPTTid(string userId)
