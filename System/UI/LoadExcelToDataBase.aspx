@@ -61,7 +61,7 @@
             Font-Size="Medium" Font-Strikeout="False" Font-Underline="False" 
            Height="22px"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="Button3" runat="server" Text="导入" Width="109px" 
-           CssClass="btn"/></td></tr>
+           CssClass="btn" onclick="Button3_Click1"/></td></tr>
     <tr><td><asp:Label ID="lblMessage5" runat="server" Font-Size="Small" 
             Text="lblMessage5"></asp:Label></td></tr>
     <tr><td style="background-color:#3FF"><img alt="" src="images/more3.jpg" />录入各系部人数</td></tr>

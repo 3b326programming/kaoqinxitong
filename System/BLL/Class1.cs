@@ -175,7 +175,7 @@ namespace BLL
                         return "选择的文件内容与数据库要求不匹配，请确认!";
                     }
                 }
-
+                DBHelper.SQlBulkCopys(TableName, dt);
                 return "导入成功QAQ";
             }
             else

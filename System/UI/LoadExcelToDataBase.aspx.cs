@@ -91,7 +91,7 @@ public partial class LoadExcelToDataBase : System.Web.UI.Page
             lblMessage1.Text = "文件为空，请重新选择！";
         }
     }
-    protected void Button3_Click(object sender, EventArgs e)
+    protected void Button3_Click1(object sender, EventArgs e)
     {
         file = FileUpload3.PostedFile;
         string fileName = file.FileName;
@@ -104,7 +104,7 @@ public partial class LoadExcelToDataBase : System.Web.UI.Page
         }
         else
         {
-            lblMessage5.Text = "文件为空，请重新选择！";
+            lblMessage5.Text = "请选择文件！";
         }
     }
 }
