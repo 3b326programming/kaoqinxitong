@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using BLL;
+using System.Data;
 
 public partial class LoadExcelToDataBase : System.Web.UI.Page
 {
@@ -35,6 +36,7 @@ public partial class LoadExcelToDataBase : System.Web.UI.Page
         string fileName = file.FileName;
         if (RadioButton1.Checked)
         {
+            lblMessage3.Text = "";
            // RadioButton1.AutoCheck = true;
             
             if (fileName != string.Empty)
@@ -48,6 +50,7 @@ public partial class LoadExcelToDataBase : System.Web.UI.Page
             }
             else
             {
+               
                 lblMessage1.Text = "文件为空，请重新选择！";
 
             }
@@ -55,7 +58,7 @@ public partial class LoadExcelToDataBase : System.Web.UI.Page
         }
         else if (RadioButton2.Checked)
         {
-            
+            lblMessage3.Text = "";
             if (fileName != string.Empty)
             {
                 file.SaveAs(Class1.UploadExcel(fileName));
@@ -106,5 +109,48 @@ public partial class LoadExcelToDataBase : System.Web.UI.Page
         {
             lblMessage5.Text = "请选择文件！";
         }
+    }
+    protected void Button4_Click(object sender, EventArgs e)
+    {
+
+        DataTable dt = AddSQLStringTODAL.GetDatatableBySQL("tb_AllTeacher_Info");
+        DataTable dt1 = AddSQLStringTODAL.GetDatatableBySQL("tb_ExtemalTCH_Info");
+        if (dt.Rows.Count > 0 || dt1.Rows.Count > 0)
+        {
+            InitialPWD();
+        }
+        else
+        {
+            lblMessage3.Text = "请先导入数据...";
+        }
+
+          
+     }
+    private void InitialPWD()
+    {
+        DataTable dt = AddSQLStringTODAL.GetDatatableBySQL("tb_AllTeacher_Info");
+        // string str1 = PWDProcess.MD5Encrypt(dt.Rows[0][0].ToString(),PWDProcess.CreateKey(dt.Rows[0][0].ToString()));
+        
+        for (int i = 0; i < dt.Rows.Count; i++)
+        {
+            string strTeacher = PWDProcess.MD5Encrypt(dt.Rows[i][0].ToString(), PWDProcess.CreateKey(dt.Rows[i][0].ToString()));
+            AddSQLStringTODAL.UpdateTabTeacher("tb_AllTeacher_Info", strTeacher, dt.Rows[i][0].ToString());
+            
+
+        }
+        
+
+        DataTable dt1 = AddSQLStringTODAL.GetDatatableBySQL("tb_ExtemalTCH_Info");
+        for (int j = 0; j < dt1.Rows.Count; j++)
+        {
+            string strThoerTeacher = PWDProcess.MD5Encrypt(dt1.Rows[j][0].ToString(), PWDProcess.CreateKey(dt1.Rows[j][0].ToString()));
+            AddSQLStringTODAL.UpdateTabTeacher("tb_ExtemalTCH_Info", strThoerTeacher, dt1.Rows[j][0].ToString());
+
+        }
+        lblMessage3.Text = "初始化密码完成...";
+    }
+    protected void Button6_Click(object sender, EventArgs e)
+    {
+
     }
 }

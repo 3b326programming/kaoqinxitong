@@ -82,11 +82,13 @@
     <tr><td><asp:Label ID="lblMessage6" runat="server" Font-Size="Small" 
             Text="lblMessage6"></asp:Label></td></tr>
     <tr><td style="background-color:#3FF"><img alt="" src="images/more3.jpg" />数据预处理</td></tr>
-    <tr><td><asp:Button ID="Button4" runat="server" Text="分析入库数据" CssClass="lab"/>
+    <tr><td><asp:Button ID="Button4" runat="server" Text="分析入库数据" CssClass="lab" 
+            onclick="Button4_Click"/>
              <asp:Label ID="lblMessage3" runat="server" Text="lblMessage3"></asp:Label></td></tr>
     <tr><td><asp:Button ID="Button5" runat="server" Text="处理入库数据" CssClass="lab"/>
              <asp:Label ID="lblMessage7" runat="server" Text="lblMessage7"></asp:Label></td></tr>
-    <tr><td><asp:Button ID="Button6" runat="server" Text="清空入库数据" CssClass="lab"/>
+    <tr><td><asp:Button ID="Button6" runat="server" Text="清空入库数据" CssClass="lab" 
+            onclick="Button6_Click"/>
              <asp:Label ID="lblMessage8" runat="server" Text="lblMessage8"></asp:Label></td></tr>
     </table>
 </asp:Content>

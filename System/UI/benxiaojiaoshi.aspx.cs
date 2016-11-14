@@ -83,12 +83,20 @@ public partial class shiyan : System.Web.UI.Page
     protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
     {
         GridView1.PageIndex = e.NewPageIndex;
+
         Bind();
+        
+
     }
     protected void GridView1_RowEditing(object sender, GridViewEditEventArgs e)
     {
         GridView1.EditIndex = e.NewEditIndex;
-        Bind();
+        
+        
+    
+        
+            Bind();
+        
     }
     protected void GridView1_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
     {
@@ -106,12 +114,17 @@ public partial class shiyan : System.Web.UI.Page
     }
     protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
     {
+        
         string strUserRole = ((TextBox)(GridView1.Rows[e.RowIndex].Cells[4].Controls[0])).Text.ToString();
         string strUserID = GridView1.DataKeys[e.RowIndex].Value.ToString();
         tb_AllTeacher_Info.rowupdate("Role", strUserRole, "UserID", strUserID);
-
+        
+           
+           
+        
         GridView1.EditIndex = -1;
         Bind();
+        
 
     }
     protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
@@ -137,6 +150,6 @@ public partial class shiyan : System.Web.UI.Page
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
-
+        Bind();
     }
 }
