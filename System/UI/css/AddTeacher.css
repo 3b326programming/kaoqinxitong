@@ -1,0 +1,19 @@
+#container{
+	width:600px;
+	height:450px;
+	 border:#CC0 2px solid;
+	 padding:20px;
+	 margin-left:200px;
+	 margin-top:30px;
+	
+	
+	}
+#container .D1{
+	  margin-top:20px;
+	  margin-left:10px;
+	
+	}
+	#container #special{
+		margin-top:40px;
+		
+		}

@@ -49,7 +49,7 @@ public partial class shiyan : System.Web.UI.Page
                 DataTable dt = tb_AllTeacher_Info.Griview("UserName", TextBox1.Text);
                 BindToGridView(dt);
             }
-            else if (DropDownList1.SelectedItem.Text == "按教师权限")
+            else if (DropDownList1.SelectedItem.Text == "按权限查询")
             {
                 DataTable dt = tb_AllTeacher_Info.Griview("Role", TextBox1.Text);
                 BindToGridView(dt);
