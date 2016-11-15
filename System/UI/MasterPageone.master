@@ -94,7 +94,19 @@
             margin-left:auto;
             margin-right:auto;
             }
-       
+        #top_right
+       {
+           width:300px;
+           height:167px;
+           float:right;
+           text-align:center;
+           font-family:@楷体;
+           }
+       #top_left
+       {
+           width:939px;
+           height:159px;
+           float:left;}
 
     </style>
   
@@ -102,8 +114,28 @@
 <body>
     <form id="form1" runat="server">
      <div id="main">
-        <div id="top"><img src="images/top.jpg" />
-        
+        <div id="top">
+                <div id="top_left"><img src="images/top.jpg"/></div>
+                <div id="top_right">
+                    <table width="300" height="167" cellspacing="0" cellpadding="0" border="0">
+                        <tr >
+                            <td width="200" height="40">当前登录用户:</td>
+                            <td width="100" height="40"><asp:Label ID="Label1" runat="server" Text="Label"></asp:Label></td>
+                        </tr>
+                        <tr>
+                            <td>用户角色:</td>
+                            <td><asp:Label ID="Label2" runat="server" Text="Label"></asp:Label></td>
+                        </tr>
+                        <tr>
+                            <td>当前周次:</td>
+                            <td><asp:Label ID="Label3" runat="server" Text="Label"></asp:Label></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"> 
+                                <A id=HyperLink3 onclick="logout()" href="javascript:window.opener=null;%20window.close();"><asp:Button ID="Button1" runat="server" Text="退出系统" /></asp:Button></A> </td> 
+                        </tr>
+                    </table>
+                </div>
         </div>
         <div id="content">
            
