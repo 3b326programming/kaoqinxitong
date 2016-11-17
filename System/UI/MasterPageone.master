@@ -1,10 +1,11 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageone.master.cs" Inherits="MasterPageone" %>
+﻿ <%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageone.master.cs" Inherits="MasterPageone" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    
      <style type="text/css">
         div
         {
@@ -100,7 +101,7 @@
            height:167px;
            float:right;
            text-align:center;
-           font-family:@楷体;
+           font-family:@方正兰亭超细黑简体 @微软雅黑;
            }
        #top_left
        {
@@ -131,8 +132,11 @@
                             <td><asp:Label ID="Label3" runat="server" Text="Label"></asp:Label></td>
                         </tr>
                         <tr>
-                            <td colspan="2"> 
-                                <A id=HyperLink3 onclick="logout()" href="javascript:window.opener=null;%20window.close();"><asp:Button ID="Button1" runat="server" Text="退出系统" /></asp:Button></A> </td> 
+                            <td><asp:Label ID="Label4" runat="server" Text="Label"></asp:Label></td>
+                            <td> 
+                                <A id=HyperLink3 onclick="logout()" href="javascript:window.opener=null;%20window.close();" style="background-image:url(images/btn_01.gif); text-decoration:none;">
+                                退出系统</A> </td> 
+                            
                         </tr>
                     </table>
                 </div>
@@ -195,4 +199,11 @@
    
     </form>
 </body>
+<script language="javascript" type="text/javascript">
+    function logout() {
+        if (confirm("您确定要退出控制面板吗？"))
+            top.location = "login.aspx";
+        return false;
+    }
+</script>
 </html>

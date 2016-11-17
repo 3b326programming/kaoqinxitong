@@ -14,6 +14,7 @@ public partial class MasterPageone : System.Web.UI.MasterPage
         Label1.Text = Session["UserName"].ToString();
         Label2.Text = Session["Role"].ToString();
         Label3.Text = Session["CurrentWeek"].ToString();
+        Label4.Text = "当前在线" + Application["online"].ToString() + "人";
         if (!IsPostBack)
         {
             //DataTable dt = getDT("select city from city where judge=1");
@@ -75,6 +76,10 @@ public partial class MasterPageone : System.Web.UI.MasterPage
             Response.Redirect("ChangePWD.aspx");
         }
 
+        
+    }
+    protected void Button1_Click(object sender, EventArgs e)
+    {
         
     }
 }

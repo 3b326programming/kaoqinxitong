@@ -5,7 +5,9 @@
     void Application_Start(object sender, EventArgs e) 
     {
         //在应用程序启动时运行的代码
-
+        Application.Lock();
+        Application["online"] = 0;
+        Application.UnLock();
     }
     
     void Application_End(object sender, EventArgs e) 
@@ -31,6 +33,10 @@
         Session["Time"] = "";
         Session["WeekRange"] = "";
         Session["Role"] = "";
+        Application.Lock();
+        Application["online"] = (int)Application["online"] + 1;
+        Application.UnLock();
+        
     }
 
     void Session_End(object sender, EventArgs e) 
@@ -39,7 +45,9 @@
         // 注意: 只有在 Web.config 文件中的 sessionstate 模式设置为
         // InProc 时，才会引发 Session_End 事件。如果会话模式 
         //设置为 StateServer 或 SQLServer，则不会引发该事件。
-
+        Application.Lock();
+        Application["online"] = (int)Application["online"] -1;
+        Application.UnLock();
     }
        
 </script>
