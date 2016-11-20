@@ -48,6 +48,7 @@ public partial class MasterPageone : System.Web.UI.MasterPage
                         tn1.ChildNodes.Add(tn2);
                     }
                 }
+                
             }
 
             else if (Session["Role"].ToString() == "院系领导")
@@ -74,6 +75,7 @@ public partial class MasterPageone : System.Web.UI.MasterPage
                         tn1.ChildNodes.Add(tn2);
                     }
                 }
+               
             }
             else if (Session["Role"].ToString() == "学管人员")
             {
@@ -156,6 +158,10 @@ public partial class MasterPageone : System.Web.UI.MasterPage
         else if (TreeView1.SelectedNode.Text == "修改密码")
         {
             Response.Redirect("ChangePWD.aspx");
+        }
+        else if (TreeView1.SelectedNode.Text == "录入考勤")
+        {
+            Response.Redirect("AdminSubmitAttendance.aspx");
         }
     }
 

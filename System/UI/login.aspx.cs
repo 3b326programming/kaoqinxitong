@@ -20,6 +20,7 @@ public partial class login : System.Web.UI.Page
             string name = BLL.topmenu.getUsername(TextBox1.Text).Rows[0][0].ToString();
             string role = BLL.topmenu.getUserrole(TextBox1.Text).Rows[0][0].ToString();
             Session["UserName"] = name;
+            Session["UserID"] = TextBox1.Text;
             switch (role)
             {
                 case "1":
@@ -28,18 +29,18 @@ public partial class login : System.Web.UI.Page
                     break;
                 case "2":
                     Session["Role"] = "院系领导";
-                    Response.Redirect("Default.aspx");
+                    Response.Redirect("AdminSubmitAttendance.aspx");
                     break;
                 case "3":
                     Session["Role"] = "学管人员";
-                    Response.Redirect("Default.aspx");
+                    Response.Redirect("AdminSubmitAttendance.aspx");
                     break;
                 case "4":
                     Session["Role"] = "教师";
-                    Response.Redirect("Default.aspx");
+                    Response.Redirect("AdminSubmitAttendance.aspx");
                     break;
             }
-            Response.Redirect("Default.aspx");
+            
         }
         else
         {
