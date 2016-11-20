@@ -25,6 +25,7 @@
     void Session_Start(object sender, EventArgs e) 
     {
         //在新会话启动时运行的代码
+        Session["Core"] = "";
         Session["UserName"] = "";
         Session["UserID"] = "";
         Session["CurrentWeek"] = "";

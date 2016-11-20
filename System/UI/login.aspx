@@ -79,7 +79,8 @@
                     <td height="40">&nbsp;</td>
                     <td height="40">
                         <asp:Button
-                            ID="Button1" runat="server" onclick="Button1_Click" CssClass="d"/></td>
+                            ID="Button1" runat="server" onclick="Button1_Click" CssClass="d"/> 
+                        <asp:Label ID="Label1" runat="server" Text="Label" ForeColor="#FF3300"></asp:Label></td>
                   </tr>
                 </table></td>
                 <td width="212" style="background:url(images/login04.jpg)" >&nbsp;</td>
@@ -88,8 +89,8 @@
           </tr>
           <tr>
             <td height="133" style="background:url(images/login05.jpg)">
-                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-                <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+               
+               
               </td>
           </tr>
         </table></td>

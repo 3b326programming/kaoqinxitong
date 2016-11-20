@@ -12,12 +12,12 @@ public partial class Core : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         Random rd = new Random();
-        string strCode = "";
+        string strCore = "";
         for (int i = 0; i < 4; i++)
         {
-            strCode += rd.Next(10).ToString();
+            strCore += rd.Next(10).ToString();
         }
-        Session["Code"] = strCode;
+        Session["Code"] = strCore;
         Bitmap bmp = new Bitmap(65, 24);
         for (int i = 0; i <= 30; i++)
         {
@@ -27,7 +27,7 @@ public partial class Core : System.Web.UI.Page
         }
         Graphics g = Graphics.FromImage(bmp);
         Font fnt = new Font("Times new Roman", 10, FontStyle.Bold);
-        g.DrawString(strCode, fnt, Brushes.AliceBlue, 0, 0);
+        g.DrawString(strCore, fnt, Brushes.AliceBlue, 0, 0);
         for (int i = 0; i <= 4; i++)
         {
             int x1 = rd.Next(65);
