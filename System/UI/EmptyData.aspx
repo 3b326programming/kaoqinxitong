@@ -21,35 +21,43 @@
     </td></tr>
     <tr><td style="height: 20px">&nbsp;&nbsp;&nbsp;“会计系的数据量”&nbsp;&nbsp;&nbsp;<asp:TextBox ID="TextBox4" 
         runat="server"></asp:TextBox>
-        <asp:Button ID="Button4" runat="server" Text="清空会计系数据量" />
+        <asp:Button ID="Button4" runat="server" Text="清空会计系数据量" 
+            onclick="Button4_Click1" />
     </td></tr>
     <tr><td style="height: 20px">&nbsp;&nbsp;&nbsp;“信息工程系的数据量”&nbsp;<asp:TextBox ID="TextBox5" 
         runat="server"></asp:TextBox>
-        <asp:Button ID="Button5" runat="server" Text="清空信息工程系数据量" />
+        <asp:Button ID="Button5" runat="server" Text="清空信息工程系数据量" 
+            onclick="Button5_Click1" />
     </td></tr>
         <tr><td style="height: 20px">&nbsp;&nbsp;&nbsp;“商务外语系的数据量”&nbsp;<asp:TextBox ID="TextBox6" 
         runat="server"></asp:TextBox>
-        <asp:Button ID="Button6" runat="server" Text="清空商务外语系数据量" />
+        <asp:Button ID="Button6" runat="server" Text="清空商务外语系数据量" 
+                onclick="Button6_Click1" />
      </td></tr>
         <tr><td style="height: 20px">&nbsp;&nbsp;&nbsp;“机械工程系的数据量”&nbsp;<asp:TextBox ID="TextBox7" 
         runat="server"></asp:TextBox>
-        <asp:Button ID="Button7" runat="server" Text="清空机械工程系数据量" />
+        <asp:Button ID="Button7" runat="server" Text="清空机械工程系数据量" 
+                onclick="Button7_Click1" />
      </td></tr>
         <tr><td style="height: 20px">&nbsp;&nbsp;&nbsp;“食品工程系的数据量”&nbsp;<asp:TextBox ID="TextBox8" 
         runat="server"></asp:TextBox>
-        <asp:Button ID="Button8" runat="server" Text="清空食品工程系数据量" />
+        <asp:Button ID="Button8" runat="server" Text="清空食品工程系数据量" 
+                onclick="Button8_Click1" />
      </td></tr>
         <tr><td style="height: 20px">&nbsp;&nbsp;&nbsp;“经济管理系的数据量”&nbsp;<asp:TextBox ID="TextBox9" 
         runat="server"></asp:TextBox>
-        <asp:Button ID="Button9" runat="server" Text="清空经济管理系数据量" />
+        <asp:Button ID="Button9" runat="server" Text="清空经济管理系数据量" 
+                onclick="Button9_Click1" />
      </td></tr>
         <tr><td style="height: 20px">&nbsp;&nbsp;&nbsp;“建筑工程系的数据量”&nbsp;<asp:TextBox ID="TextBox10" 
         runat="server"></asp:TextBox>
-        <asp:Button ID="Button10" runat="server" Text="清空建筑工程系数据量" />
+        <asp:Button ID="Button10" runat="server" Text="清空建筑工程系数据量" 
+                onclick="Button10_Click1" />
     </td></tr>
     <tr><td style="height: 20px">&nbsp;&nbsp;&nbsp;“基础教学部的数据量”&nbsp;<asp:TextBox ID="TextBox11" 
         runat="server"></asp:TextBox>
-        <asp:Button ID="Button11" runat="server" Text="清空基础教学部数据量" />
+        <asp:Button ID="Button11" runat="server" Text="清空基础教学部数据量" 
+            onclick="Button11_Click1" />
     </td></tr>
 </table>
 </asp:Content>

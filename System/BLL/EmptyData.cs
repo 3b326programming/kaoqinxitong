@@ -35,6 +35,72 @@ namespace BLL
             dt = DBHelper.getDtFromSQL("select count(*) from tb_Stu_Info ");
             return dt.Rows[0][0].ToString();
         }
+        //获取会计系的数据
+        public static string GetDatakuaiji()
+        {
+            DBHelper.getDtFromSQL("select count(*) from tb_AllInformation where TeaDepartment ='会计系'");
+            DataTable dt = new DataTable();
+            dt = DBHelper.getDtFromSQL("select count(*) from tb_AllInformation where TeaDepartment ='会计系'");
+            return dt.Rows[0][0].ToString();
+        }
+        //获取基础教学部数据
+        public static string GetDatajichujiaoxue()
+        {
+            DBHelper.getDtFromSQL("select count(*) from tb_AllInformation where TeaDepartment ='基础教学部'");
+            DataTable dt = new DataTable();
+            dt = DBHelper.getDtFromSQL("select count(*) from tb_AllInformation where TeaDepartment ='基础教学部'");
+            return dt.Rows[0][0].ToString();
+        }
+        //获取机械工程系数据
+        public static string GetDatajixiegongcheng()
+        {
+            DBHelper.getDtFromSQL("select count(*) from tb_AllInformation where StuDepartment='机械工程系'");
+            DataTable dt = new DataTable();
+            dt = DBHelper.getDtFromSQL("select count(*) from tb_AllInformation where StuDepartment ='机械工程系'");
+            return dt.Rows[0][0].ToString();
+        }
+        //获取信息工程系数据
+        public static string GetDataXinXi()
+        {
+            DBHelper.getDtFromSQL("select count (*) from tb_AllInformation where TeaDepartment ='信息工程系'");
+            DataTable dt = new DataTable();
+            dt = DBHelper.getDtFromSQL("select count (*) from tb_AllInformation where TeaDepartment ='信息工程系'");
+            return dt.Rows[0][0].ToString();
+        }
+        //获取商务外语系数据
+        public static string GetDatawaiyu()
+        {
+            DBHelper.getDtFromSQL("select count(*) from tb_AllInformation where TeaDepartment ='商务外语系'");
+            DataTable dt = new DataTable();
+            dt = DBHelper.getDtFromSQL("select count(*) from tb_AllInformation where TeaDepartment ='商务外语系'");
+            return dt.Rows[0][0].ToString();
+
+        }
+        //获取食品工程系数据
+        public static string GetDataShiPin()
+        {
+            DBHelper.getDtFromSQL("select count(*) from tb_AllInformation where StuDepartment ='食品工程系'");
+            DataTable dt = new DataTable();
+            dt = DBHelper.getDtFromSQL("select count(*) from tb_AllInformation where StuDepartment ='食品工程系'");
+            return dt.Rows[0][0].ToString();
+        }
+        //获取经管系数据
+        public static string GetDataJingGuan()
+        {
+            DBHelper.getDtFromSQL("select count(*) from tb_AllInformation where StuDepartment ='经济管理系'");
+            DataTable dt = new DataTable();
+            dt = DBHelper.getDtFromSQL("select count(*) from tb_AllInformation where StuDepartment ='经济管理系'");
+            return dt.Rows[0][0].ToString();
+        }
+        //获取建筑工程系数据
+        public static string GetDataJianZhu()
+        {
+            DBHelper.getDtFromSQL("select count(*) from tb_AllInformation where TeaDepartment ='建筑工程系'");
+            DataTable dt = new DataTable();
+            dt = DBHelper.getDtFromSQL("select count(*) from tb_AllInformation where TeaDepartment ='建筑工程系'");
+            return dt.Rows[0][0].ToString();
+
+        }
 
     }
 }
