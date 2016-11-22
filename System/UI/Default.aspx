@@ -2,5 +2,6 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
+您没有未读通知消息。
 </asp:Content>
 
