@@ -44,6 +44,7 @@
     <Compile Include="changepwd.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="EmptyData.cs" />
+    <Compile Include="FillAllSQLdataTable.cs" />
     <Compile Include="getCourse.cs" />
     <Compile Include="GetMessage_Class.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

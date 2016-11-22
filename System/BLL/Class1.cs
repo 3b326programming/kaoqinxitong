@@ -143,12 +143,7 @@ namespace BLL
                         return "选择的文件内容与数据库要求不匹配，请确认!";
                     }
                 }
-                //for (int i = 0; i < dt.Rows.Count; i++)
-                //{
-                //    DBHelper.GETDTA("insert into tb_AllInformation values('" + dt.Rows[i][0].ToString() + "','" + dt.Rows[i][1].ToString() + "','" + dt.Rows[i][2].ToString() + "','" + dt.Rows[i][3].ToString() + "','" + dt.Rows[i][4].ToString() + "','" + dt.Rows[i][5].ToString() + "','" + dt.Rows[i][6].ToString() + "','" + dt.Rows[i][7].ToString() + "','" + dt.Rows[i][8].ToString() + "','" + dt.Rows[i][9].ToString() + "','" + dt.Rows[i][10].ToString() + "','" + dt.Rows[i][11].ToString() + "','" + dt.Rows[i][12].ToString() + "','" + dt.Rows[i][13].ToString() + "')");
-                //}
                 DBHelper.SQlBulkCopys(TableName, dt);
-
                 return "导入成功QAQ";
             }
             else

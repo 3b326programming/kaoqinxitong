@@ -153,4 +153,15 @@ public partial class LoadExcelToDataBase : System.Web.UI.Page
     {
 
     }
+    protected void Button5_Click(object sender, EventArgs e)
+    {
+        FillAllSQLdataTable.FillSQLTeacherAttendance();
+        FillAllSQLdataTable.FillSQLCourse();
+        FillAllSQLdataTable.FillSQLCourseClass();
+        FillAllSQLdataTable.FillSQLStuCourseClass();
+        FillAllSQLdataTable.FillSQLStuOriClass();
+        FillAllSQLdataTable.FillSQLStu();
+        FillAllSQLdataTable.FillSQLStuDepartment();
+        lblMessage7.Text = "处理完毕";
+    }
 }
