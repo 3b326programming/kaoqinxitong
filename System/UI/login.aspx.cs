@@ -18,7 +18,8 @@ public partial class login : System.Web.UI.Page
     {
         Label1.Visible = true;
         string strCore = string.Empty;
-        Session["UserID"]=TextBox1.Text;
+        //Session["UserID"]=TextBox1.Text;
+
         //if (Session["Core"].ToString() != "")
         //{
         //    strCore = Session["Core"].ToString();
@@ -30,6 +31,7 @@ public partial class login : System.Web.UI.Page
                     string name = BLL.topmenu.getUsername(TextBox1.Text).Rows[0][0].ToString();
                     string role = BLL.topmenu.getUserrole(TextBox1.Text).Rows[0][0].ToString();
                     Session["UserName"] = name;
+                    Session["UserID"] = TextBox1.Text;
                     switch (role)
                     {
                         case "1":

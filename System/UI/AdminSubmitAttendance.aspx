@@ -36,7 +36,7 @@
     </table>
     </FooterTemplate>
     </asp:Repeater>
-    <asp:Repeater ID="rptHomework" runat="server" OnItemCommand="rptCourse_ItemCommand">
+    <asp:Repeater ID="rptHomework" runat="server" OnItemCommand="rptHomework_ItemCommand">
         <HeaderTemplate>
         <table border="0" style="width:1000px" cellspacing="0" cellpadding="0">
             <tr>
@@ -49,9 +49,9 @@
         <tr style="text-align:center">
             <td width="200px"><%#Container.ItemIndex+1 %>&nbsp;</td>
             <td width="500px"><%#DataBinder.Eval(Container.DataItem,"Week") %><%#DataBinder.Eval(Container.DataItem,"Time") %><%#(DataBinder.Eval(Container.DataItem,"Course")).ToString().Substring(0,(DataBinder.Eval(Container.DataItem,"Course")).ToString().Length-3) %>
-            <asp:TextBox ID="txtCourse" runat="server" Visible="false" Text='<%#DataBinder.Eval(Container.DataItem,"Course") %>'></asp:TextBox>
-            <asp:TextBox ID="txtWeek" runat="server" Visible="false" Text='<%#DataBinder.Eval(Container.DataItem,"Week") %>'></asp:TextBox>
-            <asp:TextBox ID="txtTime" runat="server" Visible="false" Text='<%#DataBinder.Eval(Container.DataItem,"Time") %>'></asp:TextBox>
+            <asp:TextBox ID="txtCourse1" runat="server" Visible="false" Text='<%#DataBinder.Eval(Container.DataItem,"Course") %>'></asp:TextBox>
+            <asp:TextBox ID="txtWeek1" runat="server" Visible="false" Text='<%#DataBinder.Eval(Container.DataItem,"Week") %>'></asp:TextBox>
+            <asp:TextBox ID="txtTime1" runat="server" Visible="false" Text='<%#DataBinder.Eval(Container.DataItem,"Time") %>'></asp:TextBox>
             <%--<asp:TextBox ID="txtWeekRange" runat="server" Visible="false" Text='<%#DataBinder.Eval(Container.DataItem,"StudentIDList") %>'></asp:TextBox>--%>
             </td>
             <td width="200px"><asp:Button ID="btnClick" CssClass="btn" Text="批改" Width="100" runat="server" OnClick="BtnSubmit_Click" /></td>

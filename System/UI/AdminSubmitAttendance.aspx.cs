@@ -86,7 +86,7 @@ public partial class AdminSubmitAttendance : System.Web.UI.Page
         Session["Time"] = txt2.Text.Trim();
         //TextBox txt3 = e.Item.FindControl("txtWeekRange1") as TextBox;
         //Session["WeekRange"] = txt3.Text.Trim();
-        Response.Redirect("Default.aspx");
+        Response.Redirect("HomeworkDetails.aspx");
     }
     protected void rptCourse_ItemCommand(object source, RepeaterCommandEventArgs e)
     {
@@ -103,6 +103,6 @@ public partial class AdminSubmitAttendance : System.Web.UI.Page
         Session["Time"] = txt2.Text.Trim();
         //TextBox txt3 = e.Item.FindControl("txtWeekRange") as TextBox;
         //Session["WeekRange"] = txt3.Text.Trim();
-        Response.Redirect("Default.aspx");
+        Response.Redirect("AttendanceDetails.aspx");
     }
 }

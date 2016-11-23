@@ -37,7 +37,7 @@ public partial class GetMessage : System.Web.UI.Page
         }
         if (dt.Rows.Count == 0)
         {
-            Response.Redirect("Default.aspx");
+            Response.Redirect("AdminSubmitAttendance.aspx");
         }
         else
         {
@@ -49,6 +49,6 @@ public partial class GetMessage : System.Web.UI.Page
     protected void rptMessage_ItemCommand(object source, RepeaterCommandEventArgs e)
     {
         GetMessage_Class.DeleteMessage(Session["UserID"].ToString());
-        Response.Redirect("Default.aspx");
+        Response.Redirect("AdminSubmitAttendance.aspx");
     }
 }
