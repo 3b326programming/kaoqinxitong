@@ -60,7 +60,7 @@
         onselectedindexchanged="GridView1_SelectedIndexChanged" Width="809px" 
         DataSourceID="SqlDataSource1" 
         onrowdatabound="GridView1_RowDataBound" PageSize="12" AllowSorting="True" 
-        CssClass="style1" 
+        CssClass="style1" AllowPaging="True" 
        >
         <AlternatingRowStyle BackColor="PaleGoldenrod" />
         <Columns>
