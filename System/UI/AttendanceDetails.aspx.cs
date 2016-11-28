@@ -68,39 +68,41 @@ public partial class AttendanceDetails : System.Web.UI.Page
     }
     protected void rdo_CheckChange(object sender, EventArgs e)
     {
-        Button2.Visible = true;
-        
-        foreach (GridViewRow row in GridView1.Rows)
-       
+        if (!IsPostBack)
         {
-            
-            Control ctl1 = row.FindControl("RadioButton1");
-            Control ctl2 = row.FindControl("RadioButton2");
-            Control ctl3 = row.FindControl("RadioButton3");
-            Control ctl4 = row.FindControl("RadioButton4");
-            Control ctl5 = row.FindControl("RadioButton5");
-            Control ctl6 = row.FindControl("RadioButton6");
-            TableCellCollection cell = row.Cells;
-            if ((ctl1 as RadioButton).Checked)
+            Button2.Visible = true;
+
+            foreach (GridViewRow row in GridView1.Rows)
             {
-                
-                GridView1.Rows[row.RowIndex].BackColor = System.Drawing.Color.White;
-            }
-            if ((ctl2 as RadioButton).Checked)
-            {
-                GridView1.Rows[row.RowIndex].BackColor = System.Drawing.Color.Yellow;
-            }
-            if ((ctl3 as RadioButton).Checked)
-            {
-                GridView1.Rows[row.RowIndex].BackColor = System.Drawing.Color.Red;
-            }
-            if ((ctl4 as RadioButton).Checked)
-            {
-                GridView1.Rows[row.RowIndex].BackColor = System.Drawing.Color.Yellow;
-            }
-            if ((ctl5 as RadioButton).Checked)
-            {
-                GridView1.Rows[row.RowIndex].BackColor = System.Drawing.Color.SkyBlue;
+
+                Control ctl1 = row.FindControl("RadioButton1");
+                Control ctl2 = row.FindControl("RadioButton2");
+                Control ctl3 = row.FindControl("RadioButton3");
+                Control ctl4 = row.FindControl("RadioButton4");
+                Control ctl5 = row.FindControl("RadioButton5");
+                Control ctl6 = row.FindControl("RadioButton6");
+                TableCellCollection cell = row.Cells;
+                if ((ctl1 as RadioButton).Checked)
+                {
+
+                    GridView1.Rows[row.RowIndex].BackColor = System.Drawing.Color.White;
+                }
+                if ((ctl2 as RadioButton).Checked)
+                {
+                    GridView1.Rows[row.RowIndex].BackColor = System.Drawing.Color.Yellow;
+                }
+                if ((ctl3 as RadioButton).Checked)
+                {
+                    GridView1.Rows[row.RowIndex].BackColor = System.Drawing.Color.Red;
+                }
+                if ((ctl4 as RadioButton).Checked)
+                {
+                    GridView1.Rows[row.RowIndex].BackColor = System.Drawing.Color.Yellow;
+                }
+                if ((ctl5 as RadioButton).Checked)
+                {
+                    GridView1.Rows[row.RowIndex].BackColor = System.Drawing.Color.SkyBlue;
+                }
             }
         }
     }

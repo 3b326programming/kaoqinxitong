@@ -163,6 +163,14 @@ public partial class MasterPageone : System.Web.UI.MasterPage
         {
             Response.Redirect("AdminSubmitAttendance.aspx");
         }
+        else if (TreeView1.SelectedNode.Text == "教师情况")
+        {
+            Response.Redirect("TeacherCase.aspx");
+        }
+        else if (TreeView1.SelectedNode.Text == "作业情况")
+        {
+            Response.Redirect("HomeworkCase.aspx");
+        }
     }
 
         

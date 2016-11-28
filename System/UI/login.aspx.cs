@@ -17,17 +17,18 @@ public partial class login : System.Web.UI.Page
     protected void Button1_Click(object sender, EventArgs e)
     {
         Label1.Visible = true;
+      
         string strCore = string.Empty;
-        //Session["UserID"]=TextBox1.Text;
+       
 
-        //if (Session["Core"].ToString() != "")
-        //{
-        //    strCore = Session["Core"].ToString();
-        //    if (strCore == TextBox3.Text)
-        //    {
-                //if (Class1.Login(TextBox1.Text, TextBox2.Text))
-               // if (Class1.Login(TextBox1.Text, PWDProcess.MD5Encrypt(TextBox2.Text, PWDProcess.CreateKey(TextBox2.Text))))
-                //{
+        if (TextBox3.Text.Trim().ToString()!="")
+        {
+            strCore = Session["Core"].ToString();
+            if (strCore == TextBox3.Text)
+            {
+              
+                if (Class1.Login(TextBox1.Text, PWDProcess.MD5Encrypt(TextBox2.Text, PWDProcess.CreateKey(TextBox2.Text))))
+                {
                     string name = BLL.topmenu.getUsername(TextBox1.Text).Rows[0][0].ToString();
                     string role = BLL.topmenu.getUserrole(TextBox1.Text).Rows[0][0].ToString();
                     Session["UserName"] = name;
@@ -52,29 +53,29 @@ public partial class login : System.Web.UI.Page
                             break;
                     }
                     Response.Redirect("Default.aspx");
-        //        }
-        //        else
-        //        {
-        //            Label1.Text = "用户名或密码不正确";
-        //            TextBox3.Text = "";
-        //            Session["Core"] = "";
+                }
+                else
+                {
+                    Label1.Text = "用户名或密码不正确";
+                    TextBox3.Text = "";
+                    Session["Core"] = "";
 
 
-        //        }
-        //    }
-        //    else
-        //    {
-        //        TextBox3.Text = "";
-        //        Label1.Text = "验证字符错误,重新输入";
-        //        Session["Core"] = "";
+                }
+            }
+            else
+            {
+                TextBox3.Text = "";
+                Label1.Text = "验证字符错误,重新输入";
+                Session["Core"] = "";
 
 
-        //    }
-        //}
-        //else
-        //{
-        //    Label1.Text = "请输入验证字符";
-        //}
+            }
+        }
+        else
+        {
+            Label1.Text = "请输入验证字符";
+        }
     }
     private void CurrentWeek()
     {

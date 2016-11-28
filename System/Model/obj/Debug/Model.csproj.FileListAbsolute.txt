@@ -26,3 +26,11 @@ C:\Users\hp\Desktop\考勤系统备份\kaoqinxitong\System\Model\bin\Debug\Model
 C:\Users\hp\Desktop\考勤系统备份\kaoqinxitong\System\Model\bin\Debug\Model.pdb
 C:\Users\hp\Desktop\考勤系统备份\kaoqinxitong\System\Model\obj\Debug\Model.dll
 C:\Users\hp\Desktop\考勤系统备份\kaoqinxitong\System\Model\obj\Debug\Model.pdb
+F:\shiyan\kaoqinxitong\System\Model\bin\Debug\Model.dll
+F:\shiyan\kaoqinxitong\System\Model\bin\Debug\Model.pdb
+F:\shiyan\kaoqinxitong\System\Model\obj\Debug\Model.dll
+F:\shiyan\kaoqinxitong\System\Model\obj\Debug\Model.pdb
+H:\kaoqinxitong\System\Model\bin\Debug\Model.dll
+H:\kaoqinxitong\System\Model\bin\Debug\Model.pdb
+H:\kaoqinxitong\System\Model\obj\Debug\Model.dll
+H:\kaoqinxitong\System\Model\obj\Debug\Model.pdb

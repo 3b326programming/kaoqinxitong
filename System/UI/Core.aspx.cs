@@ -17,7 +17,7 @@ public partial class Core : System.Web.UI.Page
         {
             strCore += rd.Next(10).ToString();
         }
-        Session["Code"] = strCore;
+        Session["Core"] = strCore;
         Bitmap bmp = new Bitmap(65, 24);
         for (int i = 0; i <= 30; i++)
         {

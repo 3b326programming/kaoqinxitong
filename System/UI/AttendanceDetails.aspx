@@ -20,7 +20,11 @@
  .content
  {
       width:60%;
+      height:400px;
       margin:0 auto;
+     /* overflow:scroll;*/
+    
+      
      
      
  }
@@ -54,13 +58,18 @@
     
     </div>
     <div class="content">
+        <asp:Panel ID="Panel1" runat="server" ScrollBars="Auto" Height="400px" 
+            Width="827px">
+         
+         
+       
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
         BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" 
         CellPadding="2" ForeColor="Black" GridLines="None"
         onselectedindexchanged="GridView1_SelectedIndexChanged" Width="809px" 
         DataSourceID="SqlDataSource1" 
-        onrowdatabound="GridView1_RowDataBound" PageSize="12" AllowSorting="True" 
-        CssClass="style1" AllowPaging="True" 
+        onrowdatabound="GridView1_RowDataBound" PageSize="12" 
+        CssClass="style1" 
        >
         <AlternatingRowStyle BackColor="PaleGoldenrod" />
         <Columns>
@@ -112,8 +121,22 @@
             <asp:SessionParameter Name="Week" SessionField="Week" Type="String" />
         </SelectParameters>
 </asp:SqlDataSource>
+ </asp:Panel>
 </div>
 
  
 </asp:Content>
 
+    
+   
+     
+     
+         
+        
+    
+        
+        
+            
+        
+    
+   

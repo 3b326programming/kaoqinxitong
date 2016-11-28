@@ -26,3 +26,11 @@ C:\Users\hp\Desktop\考勤系统备份\kaoqinxitong\System\DBA\bin\Debug\DBA.dll
 C:\Users\hp\Desktop\考勤系统备份\kaoqinxitong\System\DBA\bin\Debug\DBA.pdb
 C:\Users\hp\Desktop\考勤系统备份\kaoqinxitong\System\DBA\obj\Debug\DBA.dll
 C:\Users\hp\Desktop\考勤系统备份\kaoqinxitong\System\DBA\obj\Debug\DBA.pdb
+F:\shiyan\kaoqinxitong\System\DBA\bin\Debug\DBA.dll
+F:\shiyan\kaoqinxitong\System\DBA\bin\Debug\DBA.pdb
+F:\shiyan\kaoqinxitong\System\DBA\obj\Debug\DBA.dll
+F:\shiyan\kaoqinxitong\System\DBA\obj\Debug\DBA.pdb
+H:\kaoqinxitong\System\DBA\bin\Debug\DBA.dll
+H:\kaoqinxitong\System\DBA\bin\Debug\DBA.pdb
+H:\kaoqinxitong\System\DBA\obj\Debug\DBA.dll
+H:\kaoqinxitong\System\DBA\obj\Debug\DBA.pdb

@@ -26,7 +26,7 @@ namespace BLL
         public static string MD5Encrypt(string pToEncrypt, string Key)
        {
            DESCryptoServiceProvider des = new DESCryptoServiceProvider();
-           byte[] inputByteArray = Encoding.ASCII.GetBytes(Key);
+           byte[] inputByteArray = Encoding.ASCII.GetBytes(pToEncrypt);
            des.Key = ASCIIEncoding.ASCII.GetBytes(Key);
            des.IV = ASCIIEncoding.ASCII.GetBytes(Key);
            MemoryStream ms = new MemoryStream();
@@ -48,7 +48,7 @@ namespace BLL
        {
            StringBuilder sb = new StringBuilder();
          
-           string str = "XXXXXXXXXX";
+           string str = "zhixuxinZx";
            if (CheckStringIsNumString(inputStr) && inputStr.Length >= 9)
            {
                for (int i = 1; i <= 8; i++)
